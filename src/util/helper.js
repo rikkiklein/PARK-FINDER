@@ -57,7 +57,7 @@ export default {
 
 
 //
-// delWifi: function(url){
+// delHospital: function(url){
 //   const fetchSettings={
 //     method: 'DELETE',
 //     headers: new Headers({
@@ -84,7 +84,7 @@ export default {
 //   });
 // },
 //
-// updateWifi: function(url, newData){
+// updateHospital: function(url, newData){
 //   const fetchSettings={
 //     method: 'PUT',
 //     headers: new Headers({

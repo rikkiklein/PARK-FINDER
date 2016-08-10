@@ -9,7 +9,7 @@ class Update extends Component{
   handleDelClick(event){
     event.preventDefault();
     const url = {url: this.props.up}
-    util.updateWifi(url)
+    util.updateHospital(url)
     .then((json) => {
       console.log("updated!")
     })
