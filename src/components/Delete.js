@@ -9,7 +9,7 @@ class Delete extends Component{
   handleDelClick(event){
     event.preventDefault();
     const url = {url: this.props.del}
-    util.delWifi(url)
+    util.delHospital(url)
     .then((json) => {
       console.log(this.props.del + " was deleted!")
     })

@@ -31,6 +31,7 @@ export default {
   },
 
   saveHospital: function(url){
+    console.log("url is in save hospital", url);
     const fetchSettings={
       method: 'POST',
       headers: new Headers({
@@ -49,7 +50,7 @@ export default {
           }
       })
     }
-    return fetch('https://emergency-doc.firebaseio.com//hospitals/' + url.url.name + '.json',  fetchSettings).then((response)=>{
+    return fetch('https://emergency-doc.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
       return response.json();
     });
   },
@@ -73,7 +74,7 @@ export default {
           }
       })
     }
-    return fetch('https://emergency-doc.firebaseio.com//hospitals/' + url.url.name + '.json',  fetchSettings).then((response)=>{
+    return fetch('https://emergency-doc.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
       return response.json();
     });
   }

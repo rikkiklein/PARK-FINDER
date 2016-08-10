@@ -35,36 +35,29 @@ class CreateDisplayFavorites extends Component{
               <div className="left-flex">
                 <ul className="single-result-title">
                   <li><h4>Name:</h4></li>
-                  <li><h4>Location:</h4></li>
+                  <li><h4>Facility Type:</h4></li>
                   <li><h4>City:</h4></li>
-                  <li><h4>Latitude:</h4></li>
-                  <li><h4>Longtitude:</h4></li>
-                  <li><h4>Boro:</h4></li>
-                  <li><h4>Location Type:</h4></li>
-                  <li><h4>Provider:</h4></li>
-                  <li><h4>Source ID:</h4></li>
-                  <li><h4>Type:</h4></li>
-                  <li><h4>Remarks:</h4></li>
+                  <li><h4>Location:</h4></li>
+                  <li><h4>State:</h4></li>
+                  <li><h4>Zip:</h4></li>
+                  <li><h4>Borough</h4></li>
+                  <li><h4>Phone</h4></li>
                 </ul>
               </div>
               <div className="right-flex">
                 <ul className="single-result-info">
-                  <li>{item[i].url.name}</li>
-                  <li>{item[i].url.location}</li>
-                  <li>{item[i].url.city}</li>
-                  <li>{item[i].url.lat}</li>
-                  <li>{item[i].url.long_}</li>
-                  <li>{item[i].url.boro}</li>
-                  <li>{item[i].url.location_t}</li>
-                  <li>{item[i].url.provider}</li>
-                  <li>{item[i].url.ssid}</li>
-                  <li>{item[i].url.type}</li>
-                  <li>{item[i].url.remarks}</li>
+                  <li>{item[i].url.facility_name}</li>
+                  <li>{item[i].url.facility_type}</li>
+                  <li>{item[i].url.location_1_city}</li>
+                  <li>{item[i].url.location_1_location}</li>
+                  <li>{item[i].url.location_1_state}</li>
+                  <li>{item[i].url.location_1_zip}</li>
+                  <li>{item[i].url.borough}</li>
+                  <li>{item[i].url.phone}</li>
                 </ul>
               </div>
             </div>
             <div className="row">
-              <Favorite fav={item[i].url}/>
               <Delete del={item[i].url}/>
               <Update up={item[i].url}/>
             </div>
