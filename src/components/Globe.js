@@ -72,7 +72,7 @@ class Globe extends Component{
       <div className="home">
         <button className="globe" onClick={this.handleAllClick.bind(this)}>Find me a hospital!</button>
         <DisplayMap geo={this.state.geoResponse} globe={this.props.globe} />
-      <CreateDisplay geo={this.state.geoResponse}/>
+        <CreateDisplay geo={this.state.geoResponse}/>
       </div>
     )
   }

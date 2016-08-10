@@ -4,6 +4,10 @@ import util from '../util/helper.js';
 class Update extends Component{
   constructor(props){
     super(props);
+
+    this.state={
+      searchText: ""
+    }
   };
 
   handleDelClick(event){
@@ -15,10 +19,22 @@ class Update extends Component{
     })
   }
 
+  onChange(event){
+    console.log("ON CHAGE");
+    event.preventDefault();
+    console.log(event.target.value);
+    this.setState({
+      searchText: event.target.value
+    });
+  }
+
+
   render(){
+    console.log("this.state.tex", this.state.searchText);
     return(
       <div>
-        <button className="favorite" onClick={this.handleDelClick.bind(this)}>Update</button>
+        <input type="text"  className="favorite" onChange={(event)=>this.onChange(event)} value={this.state.searchTextName} placeholder="Add Comment"/>
+        <button className="favorite" onClick={(event)=>this.handleDelClick(event)}>Update</button>
       </div>
     )
   }
