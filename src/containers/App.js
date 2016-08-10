@@ -26,6 +26,10 @@ class App extends Component {
       var innerGlobe={};
       innerGlobe.lat  = position.coords.latitude;
       innerGlobe.long = position.coords.longitude;
+      // store in local
+      localStorage.long = position.coords.longitude;
+      localStorage.lat = position.coords.latitude;
+
       here.setState({
         globe: {
           latitude:innerGlobe.lat,

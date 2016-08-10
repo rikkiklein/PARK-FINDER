@@ -33,18 +33,49 @@ class Globe extends Component{
       if(res.location_1){
         let long = res.location_1.coordinates[0];
         let lat = res.location_1.coordinates[1];
-        localStorage.long = long;
-        localStorage.lat = lat;
         const distance = this.Haversine(this.props.globe, lat, long);
         if(distance < 5){
           geoArray.push(res)
         }
+
       }
     })
 
     this.setState({
       geoResponse: geoArray
     })
+
+    console.log(this.state.response[0].location_1.coordinates[0]);
+    let hospitals = []
+
+    hospitals = this.state.response.map((coords,i)=>{
+      let location={latitude:coords.location_1.coordinates[1],longitude:coords.location_1.coordinates[0]}
+
+      hospitals.push(location);
+      // console.log(hospitals);
+
+      // function storeLocally(obj){
+      //   console.log(obj.latitude, obj.longitude);
+      //
+      //     // localStorage.longitude = obj.longitude;
+      //     // localStorage.latitude = obj.latitude;
+      //
+      //     // localStorage.setItem()
+      // }
+
+      var storageNameLat = [];
+      var storageNameLng = [];
+      var index = 1;
+      var index2 = 1;
+
+      for (var i = 0; i < hospitals.length; i++) {
+        storageNameLat.push("latitude" + index++)
+        storageNameLng.push("longitude" + index2++)
+      }
+      console.log(storageNameLat, storageNameLng);
+
+
+    });
   }
 
   Haversine(globe, lat, long){

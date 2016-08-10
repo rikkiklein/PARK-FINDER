@@ -11,7 +11,9 @@ class DisplayMap extends Component{
     const url = {url: this.props.globe}
     util.getLocation(url)
     .then((json) => {
-    console.log(url.url.name + " was saved to your favorites!")
+
+    // console.log(url.url.name + " was saved to your favorites!")
+    // console.log(this.props.globe + "HIIIIIII");
     })
   }
 
