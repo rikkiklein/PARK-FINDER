@@ -4,7 +4,6 @@ import Background           from './Background.js';
 import Header               from './Header.js';
 import Footer               from './Footer.js';
 import ViewAllButton        from './ViewAllButton.js';
-import '../css/ViewAll.css';
 
 class ViewAllFavorites extends Component{
   constructor(props){

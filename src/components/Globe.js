@@ -3,6 +3,8 @@ import util from '../util/helper.js';
 import DisplayMap from './DisplayMap.js';
 import CreateDisplay from './CreateDisplay.js';
 
+import '../css/Home.css';
+
 class Globe extends Component{
   constructor(props){
     super(props);
@@ -67,8 +69,8 @@ class Globe extends Component{
 
   render(){
     return(
-      <div>
-        <button className="favorite" onClick={this.handleAllClick.bind(this)}>Find me a hospital near me!</button>
+      <div className="home">
+        <button className="favorite" onClick={this.handleAllClick.bind(this)}>Find me a hospital!</button>
         <DisplayMap geo={this.state.geoResponse} globe={this.props.globe} />
         <CreateDisplay geo={this.state.geoResponse}/>
       </div>

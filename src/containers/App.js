@@ -42,7 +42,6 @@ class App extends Component {
         <Background/>
         <Header/>
         <div className="home">
-          <h1>Find me a hospital!</h1>
           {this.geoFindMe()}
           <Globe globe={this.state.globe}/>
         </div>

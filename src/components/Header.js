@@ -9,8 +9,9 @@ class Header extends Component {
       <div>
         <div className="Header2">
           <div className="header-link"><Link to="/">Home</Link></div>
+          <div className="header-link"><Link to="/findHospital">Find Me A Hospital</Link></div>
           <div className="header-link"><Link to="/viewAllFavorites">View All Favorites</Link></div>
-        </div>
+      </div>
         {this.props.children}
       </div>
     );

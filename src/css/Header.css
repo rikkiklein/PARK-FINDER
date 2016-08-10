@@ -1,9 +1,8 @@
 .Header2, .Header3{
   display: flex;
   flex-direction: row;
-  background: #111122;
+  background: #0f2f49;
   justify-content: space-around;
-  padding: 1em;
   font-family: helvetica;
   font-size: .7em;
   letter-spacing: .1em;
@@ -70,4 +69,9 @@
 .Header3 a:hover{
   background: #efebee;
   color: #643c59;
+}
+
+.banner{
+  font-family: noteworthy;
+  font-size: 2em;
 }
