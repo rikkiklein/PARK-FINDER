@@ -80,9 +80,10 @@ h4{
 }
 
 .delete{
-  color: red;
+  color: #ff8282;
   font-weight: bold;
   border: 1px solid transparent;
+  background: transparent;
 }
 
 .globe{
@@ -90,8 +91,17 @@ h4{
   margin-bottom: 2%;
   width: 50%
 }
-.favorite:hover, .delete:hover, .globe:hover{
+.favorite:hover, .globe:hover{
   background: #efebee;
   color: #643c59;
   border: 1px solid #643c59;
+  cursor: pointer;
+
+}
+
+.delete:hover{
+  color: red;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
 }

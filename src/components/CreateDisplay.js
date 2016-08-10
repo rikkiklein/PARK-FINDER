@@ -52,12 +52,20 @@ class CreateDisplay extends Component{
     return ret;
   }
 
+  header(){
+    return(
+      <h5>RESULTS:</h5>
+    )
+  };
+
   render(){
     console.log("this.props in create", this.props.geo);
     const index = 0;
     return(
-      <div className="createDisplay">
-        {this.createCards(this.props.geo, index)}
+      <div>
+        <div className="createDisplay">
+          {this.createCards(this.props.geo, index)}
+        </div>
       </div>
     )
   }
