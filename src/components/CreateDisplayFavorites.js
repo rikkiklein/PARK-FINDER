@@ -28,14 +28,11 @@ class CreateDisplayFavorites extends Component{
         resArray.push(results[value])
       })
       let ret = resArray.map((item, index)=>{
-        console.log("item is", index, ":", item);
         for(let i in item){
-          console.log("i in item", i, "in", item);
-          console.log(item[i], "##");
           return(
             <div key={index} className="result-flex">
               <div className="row-del">
-                <Delete del={item[i].url}/>
+                <Delete del={item[i]}/>
               </div>
               <div className="column">
               <div className="left-flex">
@@ -52,21 +49,20 @@ class CreateDisplayFavorites extends Component{
               </div>
               <div className="right-flex">
                 <ul className="single-result-info">
-                  <li>{item[i].url.facility_name}</li>
-                  <li>{item[i].url.facility_type}</li>
-                  <li>{item[i].url.location_1_city}</li>
-                  <li>{item[i].url.location_1_location}</li>
-                  <li>{item[i].url.location_1_state}</li>
-                  <li>{item[i].url.location_1_zip}</li>
-                  <li>{item[i].url.borough}</li>
-                  <li>{item[i].url.phone}</li>
+                  <li>{item[i].facility_name}</li>
+                  <li>{item[i].facility_type}</li>
+                  <li>{item[i].location_1_city}</li>
+                  <li>{item[i].location_1_location}</li>
+                  <li>{item[i].location_1_state}</li>
+                  <li>{item[i].location_1_zip}</li>
+                  <li>{item[i].borough}</li>
+                  <li>{item[i].phone}</li>
                 </ul>
               </div>
             </div>
             <div className="row">
-              <Update up={item[i].url}/>
+              <Update up={item[i]}/>
             </div>
-
           </div>
           ); //end of return
         } //end of for in
@@ -76,7 +72,6 @@ class CreateDisplayFavorites extends Component{
   } //end of fx
 
   render(){
-    console.log("resArray", this.props.responseProvided);
     const index = 0;
     let resArray = [];
     return(

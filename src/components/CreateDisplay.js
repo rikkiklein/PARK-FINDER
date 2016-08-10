@@ -17,7 +17,6 @@ class CreateDisplay extends Component{
 
   createCards(spots, index){
     let ret = spots.map((card, index)=>{
-      console.log("create", card);
       return(
         <div key={index} className="result-flex">
           <div className="column">
@@ -60,7 +59,6 @@ class CreateDisplay extends Component{
   };
 
   render(){
-    console.log("this.props in create", this.props.geo);
     const index = 0;
     return(
       <div>

@@ -9,6 +9,7 @@ class Delete extends Component{
   handleDelClick(event){
     event.preventDefault();
     const url = {url: this.props.del}
+    console.log("%%%url is ", url);
     util.delHospital(url)
     .then((json) => {
       console.log(this.props.del + " was deleted!")
