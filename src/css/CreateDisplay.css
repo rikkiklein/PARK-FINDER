@@ -14,7 +14,8 @@
   width: 40%;
   text-align: right;
   order: 1;
-  color: #3B4E63;
+  color: #63a8e0;
+
 }
 
 .right-flex{
@@ -22,6 +23,7 @@
   text-align: left;
   order: 2;
   color:  #3B6356;
+  color: #3B4E63;
 }
 
 .result-flex{
@@ -58,20 +60,37 @@
 .row{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
+}
+
+.row-del{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 h4{
   display: inline;
 }
 
-.favorite{
+.favorite, .delete, .globe{
   color: #0f2f49;
   border: 1px solid #0f2f49;
   text-transform: uppercase;
 }
 
-.favorite:hover{
+.delete{
+  color: red;
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+
+.globe{
+  margin-top: 4%;
+  margin-bottom: 2%;
+  width: 50%
+}
+.favorite:hover, .delete:hover, .globe:hover{
   background: #efebee;
   color: #643c59;
   border: 1px solid #643c59;

@@ -19,7 +19,7 @@ class Favorite extends Component{
   render(){
     return(
       <div>
-        <button className="favorite" onClick={this.handleFavClick.bind(this)}>Favorite</button>
+        <button className="favorite" onClick={this.handleFavClick.bind(this)}>Add to saved hospitals</button>
       </div>
     )
   }

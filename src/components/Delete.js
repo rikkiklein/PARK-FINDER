@@ -18,7 +18,7 @@ class Delete extends Component{
   render(){
     return(
       <div>
-        <button className="favorite" onClick={this.handleDelClick.bind(this)}>Delete</button>
+        <button className="delete" onClick={this.handleDelClick.bind(this)}>X</button>
       </div>
     )
   }

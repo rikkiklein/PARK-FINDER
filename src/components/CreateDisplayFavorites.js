@@ -31,6 +31,9 @@ class CreateDisplayFavorites extends Component{
         for(let i in item){
           return(
             <div key={index} className="result-flex">
+              <div className="row-del">
+                <Delete del={item[i].url}/>
+              </div>
               <div className="column">
               <div className="left-flex">
                 <ul className="single-result-title">
@@ -58,9 +61,9 @@ class CreateDisplayFavorites extends Component{
               </div>
             </div>
             <div className="row">
-              <Delete del={item[i].url}/>
               <Update up={item[i].url}/>
             </div>
+
           </div>
           ); //end of return
         } //end of for in
