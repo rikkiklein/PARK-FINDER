@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import util from '../util/helper.js';
 
 class DisplayMap extends Component{
-  constructor(props){
-    super(props);
-  };
-
   handleClick(event){
     event.preventDefault();
     const url = {url: this.props.globe}
@@ -15,23 +11,7 @@ class DisplayMap extends Component{
     })
   }
 
-  handleAllClick(event){
-      event.preventDefault();
-      saveWifi.getAll()
-      .then((json) => {
-      this.setState({
-        response: json
-      })
-      this.calculateDistance();
-      })
-  }
-
-
-
-
   render(){
-    console.log("this.props.globe", this.props.globe);
-    console.log("Array to pass in: this.props.geo", this.props.geo);
     return(
       <div>
       </div>
@@ -42,3 +22,6 @@ class DisplayMap extends Component{
 export default DisplayMap
 
 // <button className="favorite">DISPLAY TO MAPS</button>
+//
+// console.log("this.props.globe", this.props.globe);
+// console.log("Array to pass in: this.props.geo", this.props.geo);

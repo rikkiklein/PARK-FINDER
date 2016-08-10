@@ -1,8 +1,5 @@
 import React, { Component }   from 'react';
 import util                   from '../util/helper.js';
-import Background             from '../components/Background.js';
-import Header                 from '../components/Header.js';
-import Footer                 from '../components/Footer.js';
 import CreateDisplayFavorites from './CreateDisplayFavorites.js'
 
 class ViewAllButton extends Component{

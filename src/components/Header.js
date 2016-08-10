@@ -1,10 +1,8 @@
 import React, { Component }   from 'react';
 import { Link }               from 'react-router';
-import Background             from '../components/Background.js';
 import '../css/Header.css';
 
 class Header extends Component {
-
   render(){
     return (
       <div>

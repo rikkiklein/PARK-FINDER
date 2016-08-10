@@ -25,7 +25,8 @@ export default {
           location_1_state: url.url.location_1_state,
           location_1_zip: url.url.location_1_zip,
           borough: url.url.borough,
-          phone: url.url.phone
+          phone: url.url.phone,
+          comment: ""
         }
       })
     }
@@ -45,17 +46,21 @@ export default {
   },
 
   delHospital: function(name){
-    console.log("$$$$$$$$$name is", name.url);
+    console.log("name", name);
+    console.log("name2", name.url);
+    console.log("name3", name.url.facility_name);
     const fetchSettings = {
       method: 'DELETE'
     }
     return fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name.url.facility_name +'.json', fetchSettings).then((response) => {
-      console.log("response", response);
       return response.json();
     });
   },
 
   updateHospital(name, comment){
+    console.log("$$$$$ name in update", name);
+    console.log("$$$$$ comment in update", comment);
+
     const fetchSettings = {
       method: 'PATCH',
       headers: new Headers({
@@ -65,7 +70,10 @@ export default {
         comment: comment
       })
     }
-    fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name + '.json', fetchSettings).then((response) => {
+
+    console.log("#####",name.url.facility_name,  comment);
+
+    fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name.url.facility_name + '.json', fetchSettings).then((response) => {
       return response.json();
     });
   }

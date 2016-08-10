@@ -10,10 +10,10 @@ class Update extends Component{
     }
   };
 
-  handleDelClick(event){
+  handleUpdateClick(event){
     event.preventDefault();
     const url = {url: this.props.up};
-    const comment = {comment: this.state.searchText};
+    const comment = this.state.searchText;
     util.updateHospital(url, comment)
     .then((json) => {
       console.log("updated!")
@@ -27,12 +27,11 @@ class Update extends Component{
     });
   }
 
-
   render(){
     return(
       <div className="row">
         <input type="text"  className="input" onChange={(event)=>this.onChange(event)} value={this.state.searchTextName} placeholder="Add Comment"/>
-        <button className="favorite" onClick={(event)=>this.handleDelClick(event)}>Update</button>
+        <button className="favorite" onClick={(event)=>this.handleUpdateClick(event)}>Update</button>
       </div>
     )
   }

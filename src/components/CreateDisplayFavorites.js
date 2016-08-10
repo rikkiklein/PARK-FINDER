@@ -1,9 +1,4 @@
 import React, { Component }   from 'react';
-import util                   from '../util/helper.js';
-import Background             from '../components/Background.js';
-import Header                 from '../components/Header.js';
-import Footer                 from '../components/Footer.js';
-import Favorite               from './Favorite.js';
 import Delete                 from './Delete.js';
 import Update                 from './Update.js';
 
@@ -20,8 +15,8 @@ class CreateDisplayFavorites extends Component{
 
   setArray(results, resArray, index){
     resArray = [];
-    if(results.length < 1){
-      console.log("no results", results.length);
+    if(Object.keys(results).length < 1){
+      console.log("no results", Object.keys(results).length );
     }
     else{
       Object.keys(results).map((value, index)=>{
@@ -43,8 +38,9 @@ class CreateDisplayFavorites extends Component{
                   <li><h4>Location:</h4></li>
                   <li><h4>State:</h4></li>
                   <li><h4>Zip:</h4></li>
-                  <li><h4>Borough</h4></li>
-                  <li><h4>Phone</h4></li>
+                  <li><h4>Borough:</h4></li>
+                  <li><h4>Phone:</h4></li>
+                  <li><h4>Comment:</h4></li>
                 </ul>
               </div>
               <div className="right-flex">
@@ -57,6 +53,7 @@ class CreateDisplayFavorites extends Component{
                   <li>{item[i].location_1_zip}</li>
                   <li>{item[i].borough}</li>
                   <li>{item[i].phone}</li>
+                  <li>{item[i].comment}</li>
                 </ul>
               </div>
             </div>
@@ -72,7 +69,6 @@ class CreateDisplayFavorites extends Component{
   } //end of fx
 
   render(){
-    const index = 0;
     let resArray = [];
     return(
       <div className="createDisplay">{this.setArray(this.props.responseProvided, resArray)}</div>

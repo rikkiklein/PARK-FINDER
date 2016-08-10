@@ -3,7 +3,6 @@ import Header                 from '../components/Header.js';
 import Footer                 from '../components/Footer.js';
 import Background             from '../components/Background.js';
 import Globe                  from '../components/Globe.js'
-import DisplayMap             from '../components/DisplayMap.js';
 
 import '../css/App.css';
 
@@ -36,7 +35,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.globe);
     return (
       <div className="App">
         <Background/>
