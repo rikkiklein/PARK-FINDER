@@ -29,6 +29,7 @@ class ViewAllButton extends Component{
 
   render(){
     const spots = this.state.response;
+    console.log("favs", spots);
     return(
       <div>
         <h5>View All Favorites</h5>

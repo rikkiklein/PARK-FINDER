@@ -24,7 +24,7 @@ export default {
     const fetchSettings = {
       method: 'GET'
     }
-    return fetch('https://emergency-doc.firebaseio.com//hospitals.json', fetchSettings)
+    return fetch('https://emergency-doc-p3.firebaseio.com/hospitals.json', fetchSettings)
     .then((response) => {
         return response.json();
     });
@@ -50,7 +50,7 @@ export default {
           }
       })
     }
-    return fetch('https://emergency-doc.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
+    return fetch('https://emergency-doc-p3.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
       return response.json();
     });
   },
@@ -74,10 +74,37 @@ export default {
           }
       })
     }
-    return fetch('https://emergency-doc.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
+    return fetch('https://emergency-doc-p3.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
       return response.json();
     });
   }
+
+  // updateHospital: function(url, comment){
+  //   console.log("url", url, "comment", comment);
+  //   const fetchSettings={
+  //     method: 'PUT',
+  //     headers: new Headers({
+  //       'Content-Type': 'application/json'
+  //     }),
+  //     body: JSON.stringify({
+  //         url:{
+  //           facility_name: url.url.facility_name,
+  //           facility_type: url.url.facility_type,
+  //           location_1_city: url.url.location_1_city,
+  //           location_1_location: url.url.location_1_location,
+  //           location_1_state: url.url.location_1_state,
+  //           location_1_zip: url.url.location_1_zip,
+  //           borough: url.url.borough,
+  //           phone: url.url.phone
+  //         }
+  //     })
+  //   }
+  //
+  //   return fetch('https://emergency-doc.firebaseio.com/hospitals/' + url.url.facility_name + '.json',  fetchSettings).then((response)=>{
+  //     return response.json();
+  //   });
+  // },
+  //
 
 //
 // updateHospital: function(url, newData){

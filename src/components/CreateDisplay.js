@@ -17,6 +17,7 @@ class CreateDisplay extends Component{
 
   createCards(spots, index){
     let ret = spots.map((card, index)=>{
+      console.log("create", card);
       return(
         <div key={index} className="result-flex">
           <div className="column">
