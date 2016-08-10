@@ -4,3 +4,7 @@ body {
   font-family: sans-serif;
   background: #FCFCFD;
 }
+#map{
+  width: 1000px;
+  height: 1000px;
+}

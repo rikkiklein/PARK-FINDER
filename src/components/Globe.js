@@ -33,6 +33,8 @@ class Globe extends Component{
       if(res.location_1){
         let long = res.location_1.coordinates[0];
         let lat = res.location_1.coordinates[1];
+        localStorage.long = long;
+        localStorage.lat = lat;
         const distance = this.Haversine(this.props.globe, lat, long);
         if(distance < 5){
           geoArray.push(res)
