@@ -11,7 +11,7 @@ class Favorite extends Component{
     const url = {url: this.props.fav}
     util.saveHospital(url)
     .then((json) => {
-    console.log(url.url.name + " was saved to your favorites!")
+    console.log(url.url.facility_name + " was saved to your favorites!")
     })
   }
 

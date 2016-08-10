@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import util from '../util/helper.js';
 import DisplayMap from './DisplayMap.js';
+import CreateDisplay from './CreateDisplay.js';
 
 class Globe extends Component{
   constructor(props){
@@ -12,7 +13,6 @@ class Globe extends Component{
   };
 
   handleAllClick(event){
-    console.log("IN HANDLE ALL");
     event.preventDefault();
     util.getAll()
     .then((json) => {
@@ -70,6 +70,7 @@ class Globe extends Component{
       <div>
         <button className="favorite" onClick={this.handleAllClick.bind(this)}>Find me a hospital near me!</button>
         <DisplayMap geo={this.state.geoResponse} globe={this.props.globe} />
+        <CreateDisplay geo={this.state.geoResponse}/>
       </div>
     )
   }

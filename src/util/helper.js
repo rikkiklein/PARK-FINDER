@@ -8,7 +8,6 @@ export default {
     .then((response)=>{
       return response.json();
     });
-
   },
 
   getLocation: function(url){

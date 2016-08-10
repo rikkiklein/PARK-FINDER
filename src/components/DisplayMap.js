@@ -37,7 +37,7 @@ class DisplayMap extends Component{
     console.log("Array to pass in: this.props.geo", this.props.geo);
     return(
       <div>
-        <button className="favorite">3 DISPLAY TO MAPS</button>
+        <button className="favorite">DISPLAY TO MAPS</button>
       </div>
     )
   }
