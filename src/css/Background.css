@@ -1,0 +1,18 @@
+.back{
+  background: url("banner.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
+
+h5{
+  border-bottom: 2px solid #643c59;
+  width: 50%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  color: #643c59;
+  font-size: 2em;
+  margin-bottom: 3%;
+}
