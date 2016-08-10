@@ -5,7 +5,6 @@ import Header               from './Header.js';
 import Footer               from './Footer.js';
 import ViewAllButton        from './ViewAllButton.js';
 import '../css/ViewAll.css';
-import '../css/SearchByTitle.css';
 
 class ViewAllFavorites extends Component{
   constructor(props){

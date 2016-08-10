@@ -32,7 +32,6 @@ class App extends Component {
           longitude: innerGlobe.long
         }
       })
-      console.log("this.state.globe", here.state.globe);
     }
   }
 

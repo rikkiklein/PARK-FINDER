@@ -27,13 +27,14 @@
 .result-flex{
   display: flex;
   flex-direction: column;
-  border: 1px solid #3B4E63;
+  border: 1px dotted #3B4E63;
   font-size: .5em;
   padding-top: .5em;
   padding-bottom: 1em;
   width: 30%;
   margin: 1em;
-
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .single-result-title{

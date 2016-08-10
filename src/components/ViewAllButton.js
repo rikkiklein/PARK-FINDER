@@ -4,7 +4,6 @@ import Background             from '../components/Background.js';
 import Header                 from '../components/Header.js';
 import Footer                 from '../components/Footer.js';
 import CreateDisplayFavorites from './CreateDisplayFavorites.js'
-import '../css/SearchByTitle.css';
 
 class ViewAllButton extends Component{
   constructor(props){

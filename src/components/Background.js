@@ -5,7 +5,6 @@ class Background extends Component{
   render(){
     return(
       <div className="back">
-
       </div>
     )
   }

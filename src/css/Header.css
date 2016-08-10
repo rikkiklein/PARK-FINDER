@@ -1,7 +1,6 @@
 .Header2, .Header3{
   display: flex;
   flex-direction: row;
-  background: #614257;
   background: #111122;
   justify-content: space-around;
   padding: 1em;
@@ -71,11 +70,4 @@
 .Header3 a:hover{
   background: #efebee;
   color: #643c59;
-}
-
-.search{
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
