@@ -1,9 +1,9 @@
 
 <img src="https://github.com/rikkirabz/EMERGENCY-DOC/blob/master/PROJECT%203%20-%20HOME.png" />
 
-<img src="https://github.com/rikkirabz/EMERGENCY-DOC/blob/master/PROJECT%203%20-%20VIEW ALL.png" />
+<img src="https://github.com/rikkirabz/EMERGENCY-DOC/blob/master/PROJECT%203%20VIEW%20ALL.png" />
 
-<img src="https://github.com/rikkirabz/EMERGENCY-DOC/blob/master/PROJECT%203%20-%20VIEW FAV.png" />
+<img src="https://github.com/rikkirabz/EMERGENCY-DOC/blob/master/PROJECT%203%20VIEW%20FAV.png" />
 
 
 
