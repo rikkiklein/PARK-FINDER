@@ -5,6 +5,6 @@ body {
   background: #FCFCFD;
 }
 #map{
-  width: 1000px;
-  height: 1000px;
+  width: 50%;
+  height: 500px;
 }
