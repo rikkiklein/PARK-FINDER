@@ -31,6 +31,15 @@
 }
 
 h4{
-  color: #63a8e0;
+  color: #490f2f;
   text-transform: uppercase;
+  font-family: noteworthy;
+}
+
+h6{
+  color: #2F56AB;
+  border-bottom: 1px solid #63a8e0;
+  font-size: 1em;
+  padding: .5em;
+  margin: 10%;
 }

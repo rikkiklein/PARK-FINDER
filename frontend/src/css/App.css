@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-button{
+button, .links{
   border-radius: 5px;
   border: 4px solid transparent;
   background: transparent;
@@ -77,4 +77,8 @@ input{
 
 ul li{
   list-style: none;
+}
+
+.pEnd{
+  margin-bottom:15%;
 }

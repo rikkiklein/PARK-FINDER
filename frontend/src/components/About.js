@@ -19,13 +19,13 @@ class About extends Component{
               <h4>Rikki Rifka Rabinowitz</h4>
               <h6>About Me:</h6>
               <p>I am a Frontend Web Developer who loves utilizing my creativity and hardworking skills to ensure the best outcome possible.
-                Let's connect!</p>
+                Let's connect!'</p>
               <h6>Additional Info:</h6>
-              <p>I graduated Brooklyn College Suma Cum Laude with a Bachelor of Science in Computer Science and a double minor in Accounting and Multimedia.
-                
+              <p className="pEnd">I graduated Brooklyn College Suma Cum Laude with a Bachelor of Science in Computer Science and a double minor in Accounting and Multimedia.
               </p>
-              <button className="favorite">LinkedIn</button>
-              <button className="favorite">Github</button>
+              <a className="links" target="_blank" href="https://github.com/rikkirabz">Rikki's GitHub</a>
+              <a className="links" target="_blank" href="https://www.linkedin.com/in/rifkarabinowitz">Rikki's LinkedIn</a>
+
             </div>
 
             <div className="name">
@@ -52,6 +52,8 @@ class About extends Component{
             </div>
           </div>
         </div>
+
+
       </div>
     )
   }

@@ -38,3 +38,14 @@ body {
   border-top: 2px solid #63a8e0;
   padding: 1em;
 }
+
+.links{
+  text-decoration: none;
+  color:  #63a8e0;
+}
+
+.links:hover{
+  color: #643c59;
+  border: 1px solid #643c59;
+  cursor: pointer;
+}
