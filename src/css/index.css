@@ -5,6 +5,36 @@ body {
   background: #FCFCFD;
 }
 #map{
+  margin: 0 auto;
+  width: 70vw;
+  height: 60vh;
+  border: 3px solid #643c59;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+#reloadMarkers{
+  color: #0f2f49;
+  border: 1px solid #0f2f49;
+  text-transform: uppercase;
+  background: transparent;
   width: 50%;
-  height: 500px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 2%;
+}
+
+#reloadMarkers:hover{
+  background: #efebee;
+  color: #643c59;
+  border: 1px solid #643c59;
+  cursor: pointer;
+
+}
+
+#mapArea{
+  margin: 0 auto;
+  display: block;
+  border-top: 2px solid #643c59;
+  padding: 1em;
 }

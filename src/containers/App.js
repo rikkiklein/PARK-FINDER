@@ -47,7 +47,6 @@ class App extends Component {
           {this.geoFindMe()}
           <Globe globe={this.state.globe}/>
         </div>
-        <Footer>2016 All Rights Reserved.</Footer>
     </div>
     );
   }
