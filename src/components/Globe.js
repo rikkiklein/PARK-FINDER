@@ -9,7 +9,7 @@ class Globe extends Component{
     super(props);
     this.state ={
       response: [],
-      geoResponse: []
+      geoResponse: [],
     }
   };
 
@@ -26,7 +26,6 @@ class Globe extends Component{
 
   calculateDistance(){
     var geoArray = [];
-
     const results = this.state.response;
 
     results.map((res)=>{
@@ -51,9 +50,12 @@ class Globe extends Component{
     hospitals = this.state.response.map((coords,i)=>{
       let location={latitude:coords.location_1.coordinates[1],longitude:coords.location_1.coordinates[0]}
       hospitals.push(location);
-      console.log(hospitals);
 
 
+      let watever = "watever"+i;
+      console.log(watever, "watev");
+      
+      myFunc(hospitals);
       // function storeLocally(obj){
       //   console.log(obj.latitude, obj.longitude);
       //   localStorage.longitude1 = obj.longitude;
@@ -62,9 +64,10 @@ class Globe extends Component{
       //
       //   hospitals.forEach(storeLocally);
     });
+    function myFunc(hos){
+      console.log("##", hos);
 
-
-
+    }
 
     // var storageNameLat = [];
     // var storageNameLng = [];
@@ -76,8 +79,6 @@ class Globe extends Component{
     //   storageNameLng.push("longitude" + index2++)
     // }
     // console.log(storageNameLat, storageNameLng);
-
-
   }
 
   haversine(globe, lat, long){

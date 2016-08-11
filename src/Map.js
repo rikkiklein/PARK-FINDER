@@ -1,5 +1,5 @@
 function initMap() {
-
+  //generate map
   let myLat = Number(localStorage.lat);
   let myLong = Number(localStorage.long);
   var myLatLng = {lat: myLat, lng: myLong};
@@ -27,7 +27,7 @@ function initMap() {
     map: map,
     title: 'Hello World!'
   });
-  
+
 
 }
 
