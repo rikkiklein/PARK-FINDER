@@ -1,13 +1,4 @@
-// function loadMap(){
-//   if (localStorage.latitude0 === true) {
-//     console.log('WE HAVE SOMETHING');
-//     initMap();
-//   }
-//   else {
-//     console.log('NOOOOPE');
-//     google.maps.event.trigger(map, 'resize');
-//   }
-// }
+
 
 function clearStorage(){
   localStorage.clear();
@@ -49,7 +40,7 @@ function initMap() {
         draggable: false,
         optimized: false,
         map: map,
-        title: 'Hello World!'
+        title: 'Hospital'
       });
 
 
@@ -74,4 +65,4 @@ function initMap() {
     }
 console.log(localStorage);
 clearStorage();
-}
+};
