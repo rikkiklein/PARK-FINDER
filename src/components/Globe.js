@@ -9,7 +9,7 @@ class Globe extends Component{
     super(props);
     this.state ={
       response: [],
-      geoResponse: [],
+      geoResponse: []
     }
   };
 
@@ -26,6 +26,7 @@ class Globe extends Component{
 
   calculateDistance(){
     var geoArray = [];
+
     const results = this.state.response;
 
     results.map((res)=>{
@@ -59,7 +60,9 @@ class Globe extends Component{
       localStorage.setItem(latitude, JSON.stringify(hospitals[i].latitude));
 
         console.log(localStorage);
+        localStorage.clear();
     });
+
   }
 
   haversine(globe, lat, long){
@@ -85,7 +88,6 @@ class Globe extends Component{
   }
 
   render(){
-    console.log("this.props.globe", this.props.globe);
     return(
       <div className="home">
         <button className="globe" onClick={this.handleAllClick.bind(this)}>Find me a hospital!</button>
