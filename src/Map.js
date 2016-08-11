@@ -11,12 +11,12 @@
 
 function initMap() {
 
-  let myLat = parseInt(localStorage.lat);
-  let myLong = parseInt(localStorage.long);
+  let myLat = Number(localStorage.lat);
+  let myLong = Number(localStorage.long);
   var myLatLng = {lat: myLat, lng: myLong};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
+    zoom: 13,
     center: myLatLng
   });
 
