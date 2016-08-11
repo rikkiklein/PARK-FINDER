@@ -51,21 +51,20 @@ class Globe extends Component{
     hospitals = this.state.response.map((coords,i)=>{
       let location={latitude:coords.location_1.coordinates[1],longitude:coords.location_1.coordinates[0]}
       hospitals.push(location);
-      console.log(hospitals);
+      console.log(hospitals[i]);
 
+      let longitude = "longitude" + i;
+      let latitude = "latitude" + i;
 
-      // function storeLocally(obj){
-      //   console.log(obj.latitude, obj.longitude);
-      //   localStorage.longitude1 = obj.longitude;
-      //   localStorage.latitude1 = obj.latitude;
-      //   }
-      //
-      //   hospitals.forEach(storeLocally);
+      localStorage.setItem(longitude, JSON.stringify(hospitals[i].longitude));
+      localStorage.setItem(latitude, JSON.stringify(hospitals[i].latitude));
+
+        console.log(localStorage);
     });
 
 
 
-
+    //
     // var storageNameLat = [];
     // var storageNameLng = [];
     // var index = 1;
