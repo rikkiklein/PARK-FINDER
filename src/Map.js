@@ -1,9 +1,19 @@
+// function loadMap(){
+//   if (localStorage.latitude0 === true) {
+//     console.log('WE HAVE SOMETHING');
+//     initMap();
+//   }
+//   else {
+//     console.log('NOOOOPE');
+//     google.maps.event.trigger(map, 'resize');
+//   }
+// }
+
 function initMap() {
 
-  let myLat = Number(localStorage.lat);
-  let myLong = Number(localStorage.long);
+  let myLat = parseInt(localStorage.lat);
+  let myLong = parseInt(localStorage.long);
   var myLatLng = {lat: myLat, lng: myLong};
-  console.log(localStorage);
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
@@ -16,19 +26,27 @@ function initMap() {
     title: 'Hello World!'
   });
 
-  console.log(myLatLng);
+// for (var i = 0; i < localStorage.length-2; i++) {
+//   let index = 0;
+//   let index2 = 0;
+//
+//
+//   let longitude = "longitude" + index++;
+//   let latitude = "latitude" + index2++;
+//   console.log(longitude);
+//
+//   let hosLat = parseInt(localStorage.getItem(latitude));
+//   let hosLong = parseInt(localStorage.getItem(longitude));
+//   var hosLatLng = {lat: hosLat, lng: hosLong};
+//
+//   var marker = new google.maps.Marker({
+//     position: hosLatLng,
+//     map: map,
+//     title: 'Hello World!'
+//   });
+// }
 
-  let hosLat = Number(localStorage.latitude);
-  let hosLong = Number(localStorage.longitude);
-  var hosLatLng = {lat: hosLat, lng: hosLong};
-
-  var marker = new google.maps.Marker({
-    position: hosLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-  
-
+console.log(localStorage);
 }
 
 /*.then(function(){

@@ -60,22 +60,8 @@ class Globe extends Component{
       localStorage.setItem(latitude, JSON.stringify(hospitals[i].latitude));
 
         console.log(localStorage);
+        localStorage.clear();
     });
-
-
-
-    //
-    // var storageNameLat = [];
-    // var storageNameLng = [];
-    // var index = 1;
-    // var index2 = 1;
-    //
-    // for (let i = 0; i < hospitals.length; i++) {
-    //   storageNameLat.push("latitude" + index++)
-    //   storageNameLng.push("longitude" + index2++)
-    // }
-    // console.log(storageNameLat, storageNameLng);
-
 
   }
 
