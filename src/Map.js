@@ -23,11 +23,15 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Hello World!'
+    draggable: false,
+    optimized: false,
+    icon: "https://mt.google.com/vt/icon?psize=20&font=fonts/Roboto-Regular.ttf&color=ff330000&name=icons/spotlight/spotlight-waypoint-blue.png&ax=44&ay=48&scale=1&text=%E2%80%A2",
+    title: 'YOU ARE HERE'
   });
 
     for (var i = 0; i < localStorage.length-2; i++) {
 
+      let bounceTimer;
       let longitude = "longitude" + i;
       let latitude = "latitude" + i;
 
@@ -37,11 +41,32 @@ function initMap() {
 
       var marker = new google.maps.Marker({
         position: hosLatLng,
+        draggable: false,
+        optimized: false,
         map: map,
         title: 'Hello World!'
       });
-      console.log(longitude, latitude);
-      console.log(marker);
+
+
+      google.maps.event.addListener(marker, 'mouseover', function() {
+          if (this.getAnimation() == null || typeof this.getAnimation() === 'undefined') {
+              clearTimeout(bounceTimer);
+              var that = this;
+              bounceTimer = setTimeout(function(){
+                   that.setAnimation(google.maps.Animation.BOUNCE);
+              },
+              500);
+          }
+      });
+
+      google.maps.event.addListener(marker, 'mouseout', function() {
+
+           if (this.getAnimation() != null) {
+              this.setAnimation(null);
+           }
+           clearTimeout(bounceTimer);
+      });
+
     }
 
 console.log(localStorage);
