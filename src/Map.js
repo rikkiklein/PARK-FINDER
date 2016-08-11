@@ -16,7 +16,7 @@ function initMap() {
   var myLatLng = {lat: myLat, lng: myLong};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 8,
     center: myLatLng
   });
 
@@ -26,30 +26,25 @@ function initMap() {
     title: 'Hello World!'
   });
 
-// for (var i = 0; i < localStorage.length-2; i++) {
-//   let index = 0;
-//   let index2 = 0;
-//
-//
-//   let longitude = "longitude" + index++;
-//   let latitude = "latitude" + index2++;
-//   console.log(longitude);
-//
-//   let hosLat = parseInt(localStorage.getItem(latitude));
-//   let hosLong = parseInt(localStorage.getItem(longitude));
-//   var hosLatLng = {lat: hosLat, lng: hosLong};
-//
-//   var marker = new google.maps.Marker({
-//     position: hosLatLng,
-//     map: map,
-//     title: 'Hello World!'
-//   });
-// }
+    for (var i = 0; i < localStorage.length-2; i++) {
+
+      let longitude = "longitude" + i;
+      let latitude = "latitude" + i;
+
+      let hosLat = Number(localStorage.getItem(latitude));
+      let hosLong = Number(localStorage.getItem(longitude));
+      var hosLatLng = {lat: hosLat, lng: hosLong};
+
+      var marker = new google.maps.Marker({
+        position: hosLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+      console.log(longitude, latitude);
+      console.log(marker);
+    }
 
 console.log(localStorage);
-}
 
-/*.then(function(){
-  localStorage.clear();
-  console.log(localStorage);
-})*/
+
+}

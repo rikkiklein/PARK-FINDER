@@ -1,6 +1,7 @@
 .full-banner{
   background: linear-gradient(to left, #56ab2f , #a8e063);
   background: linear-gradient(to left, #AB2F56, #e063a8);
+  background: #2F56AB;
   background: linear-gradient(to left, #2F56AB, #63a8e0);
   height: 60vh;
   display: flex;
@@ -10,17 +11,16 @@
   transition:
    width 1.5s,
    height 1.5s,
-   background 10s,
+   background-color 5s,
    transform 2s,
    color 2s,
-   border 0.5s;
-
+   border 1s;
 }
 
 .full-banner:hover{
-  background: linear-gradient(to left, #56ab2f , #a8e063);
-  background: linear-gradient(to left, #AB2F56, #e063a8);
-  background: linear-gradient(to left, #63a8e0, #2F56AB);
+  background: #2F56AB;
+  background: #63a8e0;
+
 }
 .back{
   color: white;
@@ -28,6 +28,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition:
+   width 1.5s,
+   height 1.5s,
+   background 1s,
+   transform 2s,
+   color 2s,
+   border 1s;
 }
 
 h5{
@@ -39,15 +46,36 @@ h5{
   color: #490f2f;
   font-size: 2em;
   margin-bottom: 3%;
+  transition:
+   width 1.5s,
+   height 1.5s,
+   background 2s,
+   transform 2s,
+   color 2s,
+   border 1s;
 }
 
 .pTag{
   display: inline-block;
+  transition:
+   width 1.5s,
+   height 1.5s,
+   background 2s,
+   transform 2s,
+   color 2s,
+   border 1s;
 }
 
 .flex-banner{
   display: flex;
   flex-direction: row;
+  transition:
+   width 1.5s,
+   height 1.5s,
+   background 2s,
+   transform 2s,
+   color 2s,
+   border 1s;
 }
 
 .image{
@@ -68,10 +96,10 @@ h5{
   background 2s,
   transform 2s,
   color 2s,
-  border 0.5s;
+  border 1s;
 
 }
 
 .image:hover{
-  border: 3px solid  rgba(15,47,73, .5)
+  border: 3px solid  rgba(15,47,73, .5);
 }
