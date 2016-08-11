@@ -7,8 +7,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition:
+   width 1.5s,
+   height 1.5s,
+   background 10s,
+   transform 2s,
+   color 2s,
+   border 0.5s;
+
 }
 
+.full-banner:hover{
+  background: linear-gradient(to left, #56ab2f , #a8e063);
+  background: linear-gradient(to left, #AB2F56, #e063a8);
+  background: linear-gradient(to left, #63a8e0, #2F56AB);
+}
 .back{
   color: white;
   display: flex;

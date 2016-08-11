@@ -50,35 +50,16 @@ class Globe extends Component{
     hospitals = this.state.response.map((coords,i)=>{
       let location={latitude:coords.location_1.coordinates[1],longitude:coords.location_1.coordinates[0]}
       hospitals.push(location);
+      console.log(hospitals[i]);
 
+      let longitude = "longitude" + i;
+      let latitude = "latitude" + i;
 
-      let watever = "watever"+i;
-      console.log(watever, "watev");
-      
-      myFunc(hospitals);
-      // function storeLocally(obj){
-      //   console.log(obj.latitude, obj.longitude);
-      //   localStorage.longitude1 = obj.longitude;
-      //   localStorage.latitude1 = obj.latitude;
-      //   }
-      //
-      //   hospitals.forEach(storeLocally);
+      localStorage.setItem(longitude, JSON.stringify(hospitals[i].longitude));
+      localStorage.setItem(latitude, JSON.stringify(hospitals[i].latitude));
+
+        console.log(localStorage);
     });
-    function myFunc(hos){
-      console.log("##", hos);
-
-    }
-
-    // var storageNameLat = [];
-    // var storageNameLng = [];
-    // var index = 1;
-    // var index2 = 1;
-    //
-    // for (let i = 0; i < hospitals.length; i++) {
-    //   storageNameLat.push("latitude" + index++)
-    //   storageNameLng.push("longitude" + index2++)
-    // }
-    // console.log(storageNameLat, storageNameLng);
   }
 
   haversine(globe, lat, long){
@@ -104,6 +85,7 @@ class Globe extends Component{
   }
 
   render(){
+    console.log("this.props.globe", this.props.globe);
     return(
       <div className="home">
         <button className="globe" onClick={this.handleAllClick.bind(this)}>Find me a hospital!</button>
