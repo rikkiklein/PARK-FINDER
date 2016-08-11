@@ -27,6 +27,7 @@ class Globe extends Component{
 
   calculateDistance(){
     var geoArray = [];
+
     const results = this.state.response;
 
     results.map((res)=>{
@@ -37,7 +38,6 @@ class Globe extends Component{
         if(distance < 5){
           geoArray.push(res)
         }
-
       }
     })
 
@@ -46,36 +46,39 @@ class Globe extends Component{
     })
 
     console.log(this.state.response[0].location_1.coordinates[0]);
-    let hospitals = []
+
+    let hospitals = [];
 
     hospitals = this.state.response.map((coords,i)=>{
       let location={latitude:coords.location_1.coordinates[1],longitude:coords.location_1.coordinates[0]}
-
       hospitals.push(location);
-      // console.log(hospitals);
+      console.log(hospitals);
+
 
       // function storeLocally(obj){
       //   console.log(obj.latitude, obj.longitude);
+      //   localStorage.longitude1 = obj.longitude;
+      //   localStorage.latitude1 = obj.latitude;
+      //   }
       //
-      //     // localStorage.longitude = obj.longitude;
-      //     // localStorage.latitude = obj.latitude;
-      //
-      //     // localStorage.setItem()
-      // }
-
-      var storageNameLat = [];
-      var storageNameLng = [];
-      var index = 1;
-      var index2 = 1;
-
-      for (var i = 0; i < hospitals.length; i++) {
-        storageNameLat.push("latitude" + index++)
-        storageNameLng.push("longitude" + index2++)
-      }
-      console.log(storageNameLat, storageNameLng);
-
-
+      //   hospitals.forEach(storeLocally);
     });
+
+
+
+
+    // var storageNameLat = [];
+    // var storageNameLng = [];
+    // var index = 1;
+    // var index2 = 1;
+    //
+    // for (let i = 0; i < hospitals.length; i++) {
+    //   storageNameLat.push("latitude" + index++)
+    //   storageNameLng.push("longitude" + index2++)
+    // }
+    // console.log(storageNameLat, storageNameLng);
+
+
   }
 
   Haversine(globe, lat, long){

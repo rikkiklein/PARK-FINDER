@@ -18,6 +18,16 @@ function initMap() {
 
   console.log(myLatLng);
 
+  let hosLat = Number(localStorage.latitude);
+  let hosLong = Number(localStorage.longitude);
+  var hosLatLng = {lat: hosLat, lng: hosLong};
+
+  var marker = new google.maps.Marker({
+    position: hosLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  
 
 }
 
