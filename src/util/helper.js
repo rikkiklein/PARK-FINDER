@@ -61,20 +61,33 @@ export default {
     console.log("$$$$$ name in update", name);
     console.log("$$$$$ comment in update", comment);
 
-    const fetchSettings = {
-      method: 'PATCH',
-      headers: new Headers({
-      'Content-Type': 'application/json'
-      }),
-      body: JSON.stringify({
-        comment: comment
-      })
+
+      const fetchSettings = {
+        method: 'PUT',
+        headers: new Headers({
+        'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify({
+          url:{
+            comment: comment,
+            facility_name: name.url.facility_name,
+            facility_type: name.url.facility_type,
+            location_1_city: name.url.location_1_city,
+            location_1_location: name.url.location_1_location,
+            location_1_state: name.url.location_1_state,
+            location_1_zip: name.url.location_1_zip,
+            borough: name.url.borough,
+            phone: name.url.phone
+
+          }
+        })
+      }
+      console.log("@@", fetchSettings.body);
+
+      console.log("#####",name.url.facility_name,  comment);
+
+      fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name.url.facility_name + '.json', fetchSettings).then((response) => {
+        return response.json();
+      });
     }
-
-    console.log("#####",name.url.facility_name,  comment);
-
-    fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name.url.facility_name + '.json', fetchSettings).then((response) => {
-      return response.json();
-    });
-  }
 }
