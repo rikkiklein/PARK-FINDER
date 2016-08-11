@@ -1,8 +1,4 @@
 import React, { Component }   from 'react';
-import util                   from '../util/helper.js';
-import Background             from '../components/Background.js';
-import Header                 from '../components/Header.js';
-import Footer                 from '../components/Footer.js';
 import Favorite               from './Favorite.js'
 import '../css/createDisplay.css';
 
@@ -59,7 +55,6 @@ class CreateDisplay extends Component{
   };
 
   render(){
-    console.log("this.props in create", this.props.geo);
     const index = 0;
     return(
       <div>

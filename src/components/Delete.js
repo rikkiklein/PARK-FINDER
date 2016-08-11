@@ -11,7 +11,7 @@ class Delete extends Component{
     const url = {url: this.props.del}
     util.delHospital(url)
     .then((json) => {
-      console.log(this.props.del + " was deleted!")
+      console.log(this.props.del.facility_name + " was deleted!")
     })
   }
 

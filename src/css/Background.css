@@ -1,8 +1,15 @@
-.back{
+.full-banner{
   background: linear-gradient(to left, #56ab2f , #a8e063);
   background: linear-gradient(to left, #AB2F56, #e063a8);
   background: linear-gradient(to left, #2F56AB, #63a8e0);
   height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back{
   color: white;
   display: flex;
   flex-direction: column;
@@ -15,7 +22,6 @@ h5{
   width: 50%;
   margin: 0 auto;
   text-transform: uppercase;
-  padding-top: 5%;
   padding-bottom: 2%;
   color: #490f2f;
   font-size: 2em;
@@ -24,4 +30,35 @@ h5{
 
 .pTag{
   display: inline-block;
+}
+
+.flex-banner{
+  display: flex;
+  flex-direction: row;
+}
+
+.image{
+  margin: 2em;
+  border-radius: 100px;
+  background: url("./banner.jpg");
+  height: 170px;
+  width: 170px;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  border: 4px solid rgba(255,255,255, .83);
+  box-sizing: border-box;
+  /*transition:*/
+ transition:
+  width 1.5s,
+  height 1.5s,
+  background 2s,
+  transform 2s,
+  color 2s,
+  border 0.5s;
+
+}
+
+.image:hover{
+  border: 3px solid  rgba(15,47,73, .5)
 }

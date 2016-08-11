@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import util from '../util/helper.js';
 import DisplayMap from './DisplayMap.js';
 import CreateDisplay from './CreateDisplay.js';
-
 import '../css/Home.css';
 
 class Globe extends Component{
@@ -34,7 +33,7 @@ class Globe extends Component{
       if(res.location_1){
         let long = res.location_1.coordinates[0];
         let lat = res.location_1.coordinates[1];
-        const distance = this.Haversine(this.props.globe, lat, long);
+        const distance = this.haversine(this.props.globe, lat, long);
         if(distance < 5){
           geoArray.push(res)
         }
@@ -81,7 +80,7 @@ class Globe extends Component{
 
   }
 
-  Haversine(globe, lat, long){
+  haversine(globe, lat, long){
     const currentLat = globe.latitude;
     const currentLong = globe.longitude;
     const APILat = lat;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import util                 from '../util/helper.js';
 import Background           from './Background.js';
 import Header               from './Header.js';
 import Footer               from './Footer.js';
