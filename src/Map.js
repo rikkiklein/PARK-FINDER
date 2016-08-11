@@ -31,8 +31,8 @@ function initMap() {
       let longitude = "longitude" + i;
       let latitude = "latitude" + i;
 
-      let hosLat = parseInt(localStorage.getItem(latitude));
-      let hosLong = parseInt(localStorage.getItem(longitude));
+      let hosLat = Number(localStorage.getItem(latitude));
+      let hosLong = Number(localStorage.getItem(longitude));
       var hosLatLng = {lat: hosLat, lng: hosLong};
 
       var marker = new google.maps.Marker({
@@ -41,9 +41,10 @@ function initMap() {
         title: 'Hello World!'
       });
       console.log(longitude, latitude);
+      console.log(marker);
     }
 
 console.log(localStorage);
-console.log(marker.position);
+
 
 }
