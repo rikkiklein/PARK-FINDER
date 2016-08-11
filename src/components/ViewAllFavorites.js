@@ -20,7 +20,6 @@ class ViewAllFavorites extends Component{
         <div className="ViewAll">
           <ViewAllButton />
         </div>
-        <Footer>2016 All Rights Reserved.</Footer>
       </div>
     )
   }

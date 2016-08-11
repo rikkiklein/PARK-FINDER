@@ -14,7 +14,6 @@ class About extends Component{
         <div className="about">
           <h5>About Us:</h5>
         </div>
-        <Footer>2016 All Rights Reserved.</Footer>
       </div>
     )
   }

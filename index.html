@@ -10,12 +10,15 @@
   </head>
   <body>
     <div id="root"></div>
-    <input type="button" value="Reload markers" id="reloadMarkers" onclick=initMap()>
-    <div id="map"></div>
+    <div id="mapArea">
+      <input type="button" value="Reload markers" id="reloadMarkers" onclick=initMap()>
+      <div id="map"></div>
+    </div>
+    <Footer>2016 All Rights Reserved.</Footer>
+
 
     <script src='./src/Map.js'></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI7-TOCmscy28RdbmUuLBf7yYkz_kw_H4&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGCzTTEOcozN7MzWYYcJp_DMkfVI0rBFE&callback=initMap"
     async defer></script>
 
   </body>
