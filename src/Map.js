@@ -1,3 +1,14 @@
+// function loadMap(){
+//   if (localStorage.latitude0 === true) {
+//     console.log('WE HAVE SOMETHING');
+//     initMap();
+//   }
+//   else {
+//     console.log('NOOOOPE');
+//     google.maps.event.trigger(map, 'resize');
+//   }
+// }
+
 function initMap() {
 
   let myLat = Number(localStorage.lat);
@@ -5,7 +16,7 @@ function initMap() {
   var myLatLng = {lat: myLat, lng: myLong};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 11,
+    zoom: 13,
     center: myLatLng
   });
 
