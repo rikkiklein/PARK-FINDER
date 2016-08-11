@@ -9,6 +9,11 @@
 //   }
 // }
 
+function clearStorage(){
+  localStorage.clear();
+  console.log(localStorage);
+}
+
 function initMap() {
 
   let myLat = Number(localStorage.lat);
@@ -66,10 +71,7 @@ function initMap() {
            }
            clearTimeout(bounceTimer);
       });
-
     }
-
 console.log(localStorage);
-
-
+clearStorage();
 }
