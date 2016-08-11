@@ -13,6 +13,44 @@ class About extends Component{
         <Header/>
         <div className="about">
           <h5>About Us:</h5>
+          <div className="inner-about">
+
+            <div className="name">
+              <h4>Rikki Rifka Rabinowitz</h4>
+              <h6>About Me:</h6>
+              <p>I am a Frontend Web Developer who loves utilizing my creativity and hardworking skills to ensure the best outcome possible.
+                Let's connect!</p>
+              <h6>Additional Info:</h6>
+              <p>I graduated Brooklyn College Suma Cum Laude with a Bachelor of Science in Computer Science and a double minor in Accounting and Multimedia.
+                
+              </p>
+              <button className="favorite">LinkedIn</button>
+              <button className="favorite">Github</button>
+            </div>
+
+            <div className="name">
+              <h4>Elena Peng</h4>
+              <h6>About Me:</h6>
+              <p>Lorem Ipsum</p>
+              <h6>Additional Info:</h6>
+              <p>Lorem Ipsum</p>
+              <button className="favorite">LinkedIn</button>
+              <button className="favorite">Github</button>
+            </div>
+
+
+
+            <div className="name">
+              <h4>Ivan Trujillo</h4>
+              <h6>About Me:</h6>
+              <p>I am a developer and musician based out of New York City, and when I am not rocking out with my bandmates, I am polishing my coding skills.</p>
+              <h6>Additional Info:</h6>
+              <p>If I am not coding, I can be found attending your local music venue supporting local talent.</p>
+
+              <button className="favorite">LinkedIn</button>
+              <button className="favorite">Github</button>
+            </div>
+          </div>
         </div>
       </div>
     )

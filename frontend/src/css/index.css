@@ -29,10 +29,10 @@ body {
   color: #643c59;
   border: 1px solid #643c59;
   cursor: pointer;
-
 }
 
 #mapArea{
+  width: 80%;
   margin: 0 auto;
   display: block;
   border-top: 2px solid #63a8e0;
