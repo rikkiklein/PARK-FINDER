@@ -19,7 +19,7 @@ class About extends Component{
 
               <div className="name">
                 <div className="image-rikki"></div>
-                <h4>Rikki Rifka Rabinowitz</h4>
+                <h3>Rikki Rifka Rabinowitz</h3>
               </div>
 
               <div className="divider"></div>
@@ -42,7 +42,7 @@ class About extends Component{
 
               <div className="name">
                 <div className="image-elena"></div>
-                <h4>Elena Peng</h4>
+                <h3>Elena Peng</h3>
               </div>
 
               <div className="divider"></div>
@@ -65,11 +65,11 @@ class About extends Component{
 
               <div className="name">
                 <div className="image-ivan"></div>
-                <h4>Ivan Trujillo</h4>
+                <h3>Ivan Trujillo</h3>
               </div>
 
               <div className="divider"></div>
-              
+
               <div className="description">
                 <h6>About Me:</h6>
                 <p className="pAbout">I am a developer and musician based out of New York City, and when I am not rocking out with my bandmates,

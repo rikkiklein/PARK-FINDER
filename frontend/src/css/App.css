@@ -66,6 +66,8 @@ input{
   border: 1px dotted #141E30;
   padding: .8em;
   border-radius: 5px;
+  height: 1em;
+  width: 50%;
 }
 
 .home{
