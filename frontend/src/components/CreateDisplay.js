@@ -28,11 +28,8 @@ class CreateDisplay extends Component{
               <li><h4>Golf:</h4>{card.golf}</li>
               <li><h4>Camp:</h4>{card.camp}</li>
               <li><h4>Playground:</h4>{card.play}</li>
-              <li><h4>beach:</h4>{card.beach}</li>
-              <li><h4>Nature Center:</h4>{card.nature_center}</li>
+              <li><h4>Beach:</h4>{card.beach}</li>
               <li><h4>Facility Url:</h4><a href={card.facility_url}>Link</a></li>
-              <li><h4>Golf Url</h4>{card.golf_url}</li>
-              <li><h4>Nature Center Url:</h4>{card.naturecenter_url}</li>
             </ul>
           </div>
         </div>

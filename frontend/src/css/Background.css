@@ -1,6 +1,7 @@
 .full-banner{
   background: linear-gradient(to left, #56ab2f , #a8e063);
   background: url("./banner.jpg");
+  background: url("./bannerHover.jpg");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
@@ -20,6 +21,7 @@
 
 .full-banner:hover{
   background: url("./bannerHover.jpg");
+  background: url("./banner.jpg");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
