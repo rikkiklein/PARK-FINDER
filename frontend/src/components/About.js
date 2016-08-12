@@ -31,11 +31,10 @@ class About extends Component{
             <div className="name">
               <h4>Elena Peng</h4>
               <h6>About Me:</h6>
-              <p>Lorem Ipsum</p>
+              <p>A developer and former showjumper, who can be found yelling at her code (that was working just a minute ago), or in her horse's stall with a bottle of chablis.</p>
               <h6>Additional Info:</h6>
-              <p>Lorem Ipsum</p>
-              <button className="favorite">LinkedIn</button>
-              <button className="favorite">Github</button>
+              <p>I am currently based in New York and Beijing, China.</p>
+              <a className="links" target="_blank" href="https://github.com/elenayyyp">Elena's GitHub</a>
             </div>
 
 
