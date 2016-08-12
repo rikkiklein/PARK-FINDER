@@ -25,25 +25,23 @@ class CreateDisplayFavorites extends Component{
       let ret = resArray.map((item, index)=>{
         for(let i in item){
           return(
-            <div key={index} className="result-flex">
+            <div key={index} className="cardDisplayFav">
               <div className="row-del">
                 <Delete del={item[i]}/>
               </div>
               <div className="column">
-              <div className="left-flex">
-              </div>
               <div className="right-flex">
                 <ul className="single-result-info">
-                  <li><h4>Name:</h4>{item[i].name}</li>
-                  <li><h4>Category:</h4>{item[i].category}</li>
-                  <li><h4>Region:</h4>{item[i].region}</li>
-                  <li><h4>County:</h4>{item[i].county}</li>
-                  <li><h4>Golf:</h4>{item[i].golf}</li>
-                  <li><h4>Camp:</h4>{item[i].camp}</li>
-                  <li><h4>Playground:</h4>{item[i].play}</li>
-                  <li><h4>Beach:</h4>{item[i].beach}</li>
-                  <li><h4>Facility Url:</h4><a href={item[i].facility_url}>Link</a></li>
-                  <li><h4>Comment:</h4>{item[i].comment}</li>
+                  <li><h4 className="fav">Name:</h4><div className="card2">{item[i].name}</div></li>
+                  <li><h4 className="fav">Category:</h4><div className="card2">{item[i].category}</div></li>
+                  <li><h4 className="fav">Region:</h4><div className="card2">{item[i].region}</div></li>
+                  <li><h4 className="fav">County:</h4><div className="card2">{item[i].county}</div></li>
+                  <li><h4 className="fav">Golf:</h4><div className="card2">{item[i].golf}</div></li>
+                  <li><h4 className="fav">Camp:</h4><div className="card2">{item[i].camp}</div></li>
+                  <li><h4 className="fav">Playground:</h4><div className="card2">{item[i].play}</div></li>
+                  <li><h4 className="fav">Beach:</h4><div className="card2">{item[i].beach}</div></li>
+                  <li><h4 className="fav">Facility Url:</h4><div className="card2"><a className="linkA" target="_blank" href={item[i].facility_url}>Link</a></div></li>
+                  <li><h4 className="fav">Comment:</h4><div className="card2">{item[i].comment}</div></li>
               </ul>
               </div>
             </div>
