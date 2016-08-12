@@ -5,6 +5,12 @@
   justify-content: center;
 }
 
+.outer-about{
+  display: flex;
+  border: 3px solid purple;
+  justify-content: center;
+}
+
 .about{
   display: flex;
   flex-direction: column;
@@ -13,21 +19,36 @@
   text-align: center;
   min-height: 10vh;
   border: 3px solid red;
+  width: 80%;
 }
 
 .inner-about{
   padding-bottom: 3%;
   border: 3px solid blue;
-
+  display: flex;
+  flex-direction: row;
 }
-.name{
+
+.gitFlex{
+  display: flex;
+  flex-direction: row;
+}
+.name, .description{
   border: 2px solid #490f2f;
   padding: 1em;
   font-size: .8em;
   border-radius: 5px;
-  width: 50%;
+  width: 30%;
   border: 3px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.description{
+  border: 2px solid yellow;
+  width: 70%;
 }
 
 h4{

@@ -83,17 +83,14 @@ h5{
    border 1s;
 }
 
-.image{
+.image-rikki, .image-elena, .image-ivan{
   margin: 2em;
-  border-radius: 100px;
-  background: url("./banner.jpg");
-  height: 170px;
-  width: 170px;
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+  border-radius: 80px;
+  height: 150px;
+  width: 150px;
   border: 4px solid rgba(255,255,255, .83);
   box-sizing: border-box;
+  background: gray;
   /*transition:*/
  transition:
   width 1.5s,
@@ -105,6 +102,29 @@ h5{
 
 }
 
-.image:hover{
+.image-rikki, .image-elena, .image-ivan:hover{
+  border: 3px solid  rgba(15,47,73, .5);
+}
 
+.image-rikki{
+  background: url("./Rikki.jpg");
+  background-size: cover;
+  background-position: top 20% center;
+  background-repeat: no-repeat;
+}
+
+
+.image-elena{
+  background: url("./Elena.jpg");
+  background-size: cover;
+  background-position: top 20% center;
+  background-repeat: no-repeat;
+}
+
+
+.image-ivan{
+  background: url("./Ivan.jpg");
+  background-size: cover;
+  background-position: top 20% center;
+  background-repeat: no-repeat;
 }
