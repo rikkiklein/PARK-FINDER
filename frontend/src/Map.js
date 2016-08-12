@@ -40,7 +40,7 @@ function initMap() {
         draggable: false,
         optimized: false,
         map: map,
-        title: 'Hospital'
+        title: 'Park'
       });
 
 

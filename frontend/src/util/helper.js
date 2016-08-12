@@ -79,10 +79,10 @@ export default {
       }
 
       console.log("fetch", fetchSettings.body);
-
-
       fetch('https://parkfinder-f415f.firebaseio.com/parks/'+ name.url.name + '.json', fetchSettings).then((response) => {
         return response.json();
       });
     }
 }
+
+//https://data.ny.gov/Recreation/Accessible-Outdoor-Recreation-Destinations/pt2v-9a3h

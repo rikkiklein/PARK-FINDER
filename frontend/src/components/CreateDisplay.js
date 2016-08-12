@@ -17,8 +17,6 @@ class CreateDisplay extends Component{
       return(
         <div key={index} className="result-flex">
           <div className="column">
-          <div className="left-flex">
-          </div>
           <div className="right-flex">
             <ul className="single-result-info">
               <li><h4>Name:</h4> {card.name}</li>

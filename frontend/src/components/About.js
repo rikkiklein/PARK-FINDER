@@ -45,10 +45,10 @@ class About extends Component{
               <h6>About Me:</h6>
               <p>I am a developer and musician based out of New York City, and when I am not rocking out with my bandmates, I am polishing my coding skills.</p>
               <h6>Additional Info:</h6>
-              <p>If I am not coding, I can be found attending your local music venue supporting local talent.</p>
+              <p className="pEnd">If I am not coding, I can be found attending your local music venue supporting local talent.</p>
 
-                <a className="links" target="_blank" href="https://github.com/rikkirabz">Rikki's GitHub</a>
-                <a className="links" target="_blank" href="https://www.linkedin.com/in/rifkarabinowitz">Rikki's LinkedIn</a>
+                <a className="links" target="_blank" href="https://github.com/Elkrival">Ivan's GitHub</a>
+                <a className="links" target="_blank" href="https://www.linkedin.com/in/ivan-trujillo-82903176">Ivan's LinkedIn</a>
 
             </div>
           </div>

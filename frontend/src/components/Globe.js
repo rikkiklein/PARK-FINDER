@@ -43,17 +43,17 @@ class Globe extends Component{
       geoResponse: geoArray
     })
 
-    let hospitals = [];
+    let parks = [];
 
-    hospitals = this.state.response.map((coords,i)=>{
+    parks = this.state.response.map((coords,i)=>{
       let location={latitude:coords.location.coordinates[1],longitude:coords.location.coordinates[0]}
-      hospitals.push(location);
+      parks.push(location);
 
       let longitude = "longitude" + i;
       let latitude = "latitude" + i;
 
-      localStorage.setItem(longitude, JSON.stringify(hospitals[i].longitude));
-      localStorage.setItem(latitude, JSON.stringify(hospitals[i].latitude));
+      localStorage.setItem(longitude, JSON.stringify(parks[i].longitude));
+      localStorage.setItem(latitude, JSON.stringify(parks[i].latitude));
 
     });
 

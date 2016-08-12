@@ -15,19 +15,16 @@
 }
 
 .inner-about{
-  display: flex;
-  flex-direction: row;
   padding-bottom: 3%;
 }
 .name{
   border: 2px solid #490f2f;
   padding: 1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
   font-size: .8em;
-  width: 30%;
-  margin: 1%;
   border-radius: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 h4{
@@ -40,6 +37,4 @@ h6{
   color: #2F56AB;
   border-bottom: 1px solid #63a8e0;
   font-size: 1em;
-  padding: .5em;
-  margin: 10%;
 }
