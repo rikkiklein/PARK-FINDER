@@ -24,4 +24,6 @@
 .banner{
   font-family: noteworthy;
   font-size: 2em;
+  font-weight: bold;
+  letter-spacing: .2em;
 }

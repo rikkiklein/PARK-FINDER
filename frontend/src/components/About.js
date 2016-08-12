@@ -31,7 +31,7 @@ class About extends Component{
             <div className="name">
               <h4>Elena Peng</h4>
               <h6>About Me:</h6>
-              <p>Lorem Ipsum</p>
+              <p></p>
               <h6>Additional Info:</h6>
               <p>Lorem Ipsum</p>
               <button className="favorite">LinkedIn</button>
