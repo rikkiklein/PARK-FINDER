@@ -15,22 +15,18 @@ class CreateDisplay extends Component{
     let ret = spots.map((card, index)=>{
       console.log("card", card);
       return(
-        <div key={index} className="result-flex">
-          <div className="column">
-          <div className="right-flex">
-            <ul className="single-result-info">
-              <li><h4>Name:</h4> {card.name}</li>
-              <li><h4>Category:</h4>{card.category}</li>
-              <li><h4>Region:</h4>{card.region}</li>
-              <li><h4>County:</h4>{card.county}</li>
-              <li><h4>Golf:</h4>{card.golf}</li>
-              <li><h4>Camp:</h4>{card.camp}</li>
-              <li><h4>Playground:</h4>{card.play}</li>
-              <li><h4>Beach:</h4>{card.beach}</li>
-              <li><h4>Facility Url:</h4><a href={card.facility_url}>Link</a></li>
+        <div key={index} className="cardDisplay">
+            <ul>
+              <li><h4 className="card-name">Name:</h4> <div className="card">{card.name}</div></li>
+              <li><h4>Category:</h4><div className="card">{card.category}</div></li>
+              <li><h4>Region:</h4><div className="card">{card.region}</div></li>
+              <li><h4>County:</h4><div className="card">{card.county}</div></li>
+              <li><h4>Golf:</h4><div className="card">{card.golf}</div></li>
+              <li><h4>Camp:</h4><div className="card">{card.camp}</div></li>
+              <li><h4>Playground:</h4><div className="card">{card.play}</div></li>
+              <li><h4>Beach:</h4><div className="card">{card.beach}</div></li>
+              <li><h4>Facility Url:</h4><div className="card"><a href={card.facility_url}>Link</a></div></li>
             </ul>
-          </div>
-        </div>
           <Favorite fav={spots[index]}/>
         </div>
       )

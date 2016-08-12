@@ -63,6 +63,9 @@ h4{
   color: #490f2f;
   text-transform: uppercase;
   font-family: noteworthy;
+  display: inline-block;
+  width: 20%;
+  margin: .01em;
 }
 
 h6{
@@ -76,6 +79,16 @@ h6{
   width: 80%;
 }
 
+.card{
+  display: inline-block;
+  width: 70%;
+  text-align: center;
+  font-size: 1.35em;
+}
+
+.card-name{
+  color: green;
+}
 .pAbout{
   padding: .5em;
   width: 80%;
