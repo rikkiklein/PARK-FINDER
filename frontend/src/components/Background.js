@@ -6,10 +6,9 @@ class Background extends Component{
     return(
       <div className="full-banner">
         <div className="flex-banner">
-          <div className="image"></div>
           <div className="back">
-            <div className="banner">EMERGENCY DOC!</div>
-            <p className="pTag">Find the nearest public hospital located near you.</p>
+            <div className="banner">PARK FINDER</div>
+            <p className="pTag">Find the nearest park located near you.</p>
           </div>
         </div>
       </div>
@@ -18,3 +17,6 @@ class Background extends Component{
 }
 
 export default Background
+
+//
+// <div className="image"></div>

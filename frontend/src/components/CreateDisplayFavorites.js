@@ -31,30 +31,20 @@ class CreateDisplayFavorites extends Component{
               </div>
               <div className="column">
               <div className="left-flex">
-                <ul className="single-result-title">
-                  <li><h4>Name:</h4></li>
-                  <li><h4>Facility Type:</h4></li>
-                  <li><h4>City:</h4></li>
-                  <li><h4>Location:</h4></li>
-                  <li><h4>State:</h4></li>
-                  <li><h4>Zip:</h4></li>
-                  <li><h4>Borough:</h4></li>
-                  <li><h4>Phone:</h4></li>
-                  <li><h4>Comment:</h4></li>
-                </ul>
               </div>
               <div className="right-flex">
                 <ul className="single-result-info">
-                  <li>{item[i].facility_name}</li>
-                  <li>{item[i].facility_type}</li>
-                  <li>{item[i].location_1_city}</li>
-                  <li>{item[i].location_1_location}</li>
-                  <li>{item[i].location_1_state}</li>
-                  <li>{item[i].location_1_zip}</li>
-                  <li>{item[i].borough}</li>
-                  <li>{item[i].phone}</li>
-                  <li>{item[i].comment}</li>
-                </ul>
+                  <li><h4>Name:</h4>{item[i].name}</li>
+                  <li><h4>Category:</h4>{item[i].category}</li>
+                  <li><h4>Region:</h4>{item[i].region}</li>
+                  <li><h4>County:</h4>{item[i].county}</li>
+                  <li><h4>Golf:</h4>{item[i].golf}</li>
+                  <li><h4>Camp:</h4>{item[i].camp}</li>
+                  <li><h4>Playground:</h4>{item[i].play}</li>
+                  <li><h4>Beach:</h4>{item[i].beach}</li>
+                  <li><h4>Facility Url:</h4><a href={item[i].facility_url}>Link</a></li>
+                  <li><h4>Comment:</h4>{item[i].comment}</li>
+              </ul>
               </div>
             </div>
             <div className="row">

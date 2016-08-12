@@ -1,8 +1,9 @@
 .full-banner{
   background: linear-gradient(to left, #56ab2f , #a8e063);
-  background: linear-gradient(to left, #AB2F56, #e063a8);
-  background: #2F56AB;
-  background: linear-gradient(to left, #2F56AB, #63a8e0);
+  background: url("./banner.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -11,15 +12,17 @@
   transition:
    width 1.5s,
    height 1.5s,
-   background-color 1s,
+   background 1s,
    transform 2s,
    color 2s,
    border 1s;
 }
 
 .full-banner:hover{
-  background: #2F56AB;
-  background: #63a8e0;
+  background: url("./bannerHover.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 
 }
 .back{
@@ -101,5 +104,5 @@ h5{
 }
 
 .image:hover{
-  border: 3px solid  rgba(15,47,73, .5);
+
 }

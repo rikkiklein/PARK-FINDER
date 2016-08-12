@@ -4,13 +4,13 @@ export default {
       const fetchSettings = {
         method: 'GET'
       }
-      return fetch('https://data.cityofnewyork.us/resource/w7a6-9xrz.json', fetchSettings)
+      return fetch('https://data.ny.gov/resource/cb9z-ibgp.json', fetchSettings)
       .then((response)=>{
         return response.json();
       });
     },
 
-    saveHospital: function(url){
+    savePark: function(url){
     const fetchSettings = {
       method: 'PUT',
       headers: new Headers({
@@ -18,19 +18,20 @@ export default {
       }),
       body: JSON.stringify({
         url:{
-          facility_name: url.url.facility_name,
-          facility_type: url.url.facility_type,
-          location_1_city: url.url.location_1_city,
-          location_1_location: url.url.location_1_location,
-          location_1_state: url.url.location_1_state,
-          location_1_zip: url.url.location_1_zip,
-          borough: url.url.borough,
-          phone: url.url.phone,
+          name: url.url.name,
+          category: url.url.category,
+          region: url.url.region,
+          county: url.url.county,
+          golf: url.url.golf,
+          camp: url.url.camp,
+          playground: url.url.playground,
+          beach: url.url.beach,
+          facility_url: url.url.facility_url,
           comment: ""
         }
       })
     }
-    return fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/' + url.url.facility_name+".json", fetchSettings).then((response) => {
+    return fetch('https://parkfinder-f415f.firebaseio.com/parks/' + url.url.name+".json", fetchSettings).then((response) => {
       return response.json();
 
     });
@@ -40,28 +41,22 @@ export default {
     const fetchSettings = {
       method: 'GET'
     }
-    return fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals.json', fetchSettings).then((response) => {
+    return fetch('https://parkfinder-f415f.firebaseio.com/parks.json', fetchSettings).then((response) => {
       return response.json();
     });
   },
 
-  delHospital: function(name){
-    console.log("name", name);
-    console.log("name2", name.url);
-    console.log("name3", name.url.facility_name);
+  delPark: function(name){
     const fetchSettings = {
       method: 'DELETE'
     }
-    return fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name.url.facility_name +'.json', fetchSettings).then((response) => {
+    return fetch('https://parkfinder-f415f.firebaseio.com/parks/'+ name.url.name +'.json', fetchSettings).then((response) => {
       return response.json();
     });
   },
 
-  updateHospital(name, comment){
-    console.log("$$$$$ name in update", name);
-    console.log("$$$$$ comment in update", comment);
-
-
+  updatePark(name, comment){
+    console.log("comment", comment);
       const fetchSettings = {
         method: 'PUT',
         headers: new Headers({
@@ -70,23 +65,23 @@ export default {
         body: JSON.stringify({
           url:{
             comment: comment,
-            facility_name: name.url.facility_name,
-            facility_type: name.url.facility_type,
-            location_1_city: name.url.location_1_city,
-            location_1_location: name.url.location_1_location,
-            location_1_state: name.url.location_1_state,
-            location_1_zip: name.url.location_1_zip,
-            borough: name.url.borough,
-            phone: name.url.phone
-
+            name: name.url.name,
+            category: name.url.category,
+            region: name.url.region,
+            county: name.url.county,
+            golf: name.url.golf,
+            camp: name.url.camp,
+            playground: name.url.playground,
+            beach: name.url.beach,
+            facility_url: name.url.facility_url,
           }
         })
       }
-      console.log("@@", fetchSettings.body);
 
-      console.log("#####",name.url.facility_name,  comment);
+      console.log("fetch", fetchSettings.body);
 
-      fetch('https://hospital-finder-5d1d5.firebaseio.com/hospitals/'+ name.url.facility_name + '.json', fetchSettings).then((response) => {
+
+      fetch('https://parkfinder-f415f.firebaseio.com/parks/'+ name.url.name + '.json', fetchSettings).then((response) => {
         return response.json();
       });
     }

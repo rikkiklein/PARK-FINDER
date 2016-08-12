@@ -14,7 +14,7 @@ class Update extends Component{
     event.preventDefault();
     const url = {url: this.props.up};
     const comment = this.state.searchText;
-    util.updateHospital(url, comment)
+    util.updatePark(url, comment)
     .then((json) => {
       console.log("updated!")
     })

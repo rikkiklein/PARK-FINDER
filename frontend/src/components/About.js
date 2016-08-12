@@ -47,8 +47,9 @@ class About extends Component{
               <h6>Additional Info:</h6>
               <p>If I am not coding, I can be found attending your local music venue supporting local talent.</p>
 
-              <button className="favorite">LinkedIn</button>
-              <button className="favorite">Github</button>
+                <a className="links" target="_blank" href="https://github.com/rikkirabz">Rikki's GitHub</a>
+                <a className="links" target="_blank" href="https://www.linkedin.com/in/rifkarabinowitz">Rikki's LinkedIn</a>
+
             </div>
           </div>
         </div>

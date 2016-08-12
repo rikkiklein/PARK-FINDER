@@ -5,7 +5,7 @@ class Favorite extends Component{
   handleFavClick(event){
     event.preventDefault();
     const url = {url: this.props.fav}
-    util.saveHospital(url)
+    util.savePark(url)
     .then((json) => {
       console.log(this.props.fav, "was successfully saved!");
     })
@@ -14,7 +14,7 @@ class Favorite extends Component{
   render(){
     return(
       <div>
-        <button className="favorite" onClick={this.handleFavClick.bind(this)}>Add to saved hospitals</button>
+        <button className="favorite" onClick={this.handleFavClick.bind(this)}>Add to favorite parks</button>
       </div>
     )
   }

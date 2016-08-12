@@ -28,13 +28,12 @@ class Globe extends Component{
     var geoArray = [];
 
     const results = this.state.response;
-
     results.map((res)=>{
-      if(res.location_1){
-        let long = res.location_1.coordinates[0];
-        let lat = res.location_1.coordinates[1];
+      if(res.location){
+        let long = res.location.coordinates[0];
+        let lat = res.location.coordinates[1];
         const distance = this.haversine(this.props.globe, lat, long);
-        if(distance < 5){
+        if(distance < 10){
           geoArray.push(res)
         }
       }
@@ -44,14 +43,11 @@ class Globe extends Component{
       geoResponse: geoArray
     })
 
-    console.log(this.state.response[0].location_1.coordinates[0]);
-
     let hospitals = [];
 
     hospitals = this.state.response.map((coords,i)=>{
-      let location={latitude:coords.location_1.coordinates[1],longitude:coords.location_1.coordinates[0]}
+      let location={latitude:coords.location.coordinates[1],longitude:coords.location.coordinates[0]}
       hospitals.push(location);
-      console.log(hospitals[i]);
 
       let longitude = "longitude" + i;
       let latitude = "latitude" + i;
@@ -59,7 +55,6 @@ class Globe extends Component{
       localStorage.setItem(longitude, JSON.stringify(hospitals[i].longitude));
       localStorage.setItem(latitude, JSON.stringify(hospitals[i].latitude));
 
-        console.log(localStorage);
     });
 
   }
@@ -89,7 +84,7 @@ class Globe extends Component{
   render(){
     return(
       <div className="home">
-        <button className="globe" onClick={this.handleAllClick.bind(this)}>Find me a hospital!</button>
+        <button className="globe" onClick={this.handleAllClick.bind(this)}>Find a park near me!</button>
         <DisplayMap geo={this.state.geoResponse} globe={this.props.globe} />
         <CreateDisplay geo={this.state.geoResponse}/>
       </div>
