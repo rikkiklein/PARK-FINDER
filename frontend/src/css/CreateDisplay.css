@@ -15,7 +15,6 @@
   text-align: right;
   order: 1;
   color: #63a8e0;
-
 }
 
 .right-flex{
@@ -48,7 +47,6 @@
 .single-result-info{
   text-align: left;
   padding: .5em;
-
 }
 
 .column{
@@ -97,7 +95,6 @@ h4{
   color: #643c59;
   border: 1px solid #643c59;
   cursor: pointer;
-
 }
 
 .delete:hover{

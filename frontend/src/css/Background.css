@@ -25,8 +25,8 @@
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-
 }
+
 .back{
   color: white;
   display: flex;
@@ -99,10 +99,9 @@ h5{
   transform 2s,
   color 2s,
   border 1s;
-
 }
 
-.image-rikki, .image-elena, .image-ivan:hover{
+.image-rikki:hover, .image-elena:hover, .image-ivan:hover{
   border: 3px solid  rgba(15,47,73, .5);
 }
 
@@ -111,20 +110,21 @@ h5{
   background-size: cover;
   background-position: top 20% center;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
-
 
 .image-elena{
   background: url("./Elena.jpg");
   background-size: cover;
   background-position: top 20% center;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
-
 
 .image-ivan{
   background: url("./Ivan.jpg");
   background-size: cover;
   background-position: top 20% center;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }

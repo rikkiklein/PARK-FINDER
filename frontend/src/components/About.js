@@ -22,12 +22,14 @@ class About extends Component{
                 <h4>Rikki Rifka Rabinowitz</h4>
               </div>
 
+              <div className="divider"></div>
+
               <div className="description">
                 <h6>About Me:</h6>
-                <p>I am a Frontend Web Developer who loves utilizing my creativity and hardworking skills to ensure the best outcome possible.
-                Let's connect!</p>
+                <p className="pAbout">I am a Frontend Web Developer who loves utilizing my creativity and hardworking skills to ensure the best outcome possible.
+                  Let's connect!</p>
                 <h6>Additional Info:</h6>
-                <p className="pEnd">I graduated Brooklyn College Suma Cum Laude with a Bachelor of Science in Computer Science and a double minor in Accounting and Multimedia.
+                <p className="pAbout">I graduated Brooklyn College Suma Cum Laude with a Bachelor of Science in Computer Science and a double minor in Accounting and Multimedia.
                 </p>
                 <div className="gitFlex">
                   <a className="links" target="_blank" href="https://github.com/rikkirabz">Rikki's GitHub</a>
@@ -43,13 +45,15 @@ class About extends Component{
                 <h4>Elena Peng</h4>
               </div>
 
+              <div className="divider"></div>
+
               <div className="description">
                 <h6>About Me:</h6>
-                    <p>I am a developer and former showjumper, who can be found yelling at her code (that was working just a minute ago), or in my
+                    <p className="pAbout">I am a developer and former showjumper, who can be found yelling at her code (that was working just a minute ago), or in my
                       horse's stall with a bottle of chablis.</p>
 
                 <h6>Additional Info:</h6>
-                <p className="pEnd">
+                <p className="pAbout">
                   I am currently based in New York and Beijing, China.</p>
                 <div className="gitFlex">
                   <a className="links" target="_blank" href="https://github.com/elenayyyp">Elena's GitHub</a>
@@ -64,12 +68,14 @@ class About extends Component{
                 <h4>Ivan Trujillo</h4>
               </div>
 
+              <div className="divider"></div>
+              
               <div className="description">
                 <h6>About Me:</h6>
-                <p>I am a developer and musician based out of New York City, and when I am not rocking out with my bandmates,
+                <p className="pAbout">I am a developer and musician based out of New York City, and when I am not rocking out with my bandmates,
                   I am polishing my coding skills.</p>
                 <h6>Additional Info:</h6>
-                <p className="pEnd">If I am not coding, I can be found attending your local music venue supporting local talent.</p>
+                <p className="pAbout">If I am not coding, I can be found attending your local music venue supporting local talent.</p>
                 <div className="gitFlex">
                   <a className="links" target="_blank" href="https://github.com/Elkrival">Ivan's GitHub</a>
                   <a className="links" target="_blank" href="https://www.linkedin.com/in/ivan-trujillo-82903176">Ivan's LinkedIn</a>

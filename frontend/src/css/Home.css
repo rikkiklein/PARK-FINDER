@@ -7,7 +7,6 @@
 
 .outer-about{
   display: flex;
-  border: 3px solid purple;
   justify-content: center;
 }
 
@@ -18,13 +17,11 @@
   align-items: center;
   text-align: center;
   min-height: 10vh;
-  border: 3px solid red;
   width: 80%;
 }
 
 .inner-about{
   padding-bottom: 3%;
-  border: 3px solid blue;
   display: flex;
   flex-direction: row;
 }
@@ -32,14 +29,23 @@
 .gitFlex{
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
 }
+
+.divider{
+  border: 1px dotted #490f2f;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .name, .description{
-  border: 2px solid #490f2f;
+  border: 1px solid #490f2f;
+  border-right: 1px solid transparent;
   padding: 1em;
   font-size: .8em;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   width: 30%;
-  border: 3px solid green;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -47,8 +53,10 @@
 }
 
 .description{
-  border: 2px solid yellow;
   width: 70%;
+  border: 1px solid #490f2f;
+  border-left: 1px solid transparent;
+  border-radius: 0px 5px 5px 0px;
 }
 
 h4{
@@ -61,4 +69,16 @@ h6{
   color: #2F56AB;
   border-bottom: 1px solid #63a8e0;
   font-size: 1em;
+  padding-bottom: .5em;
+  margin: .5em;
+  margin-top: .2em;
+  margin-bottom: .2em;
+  width: 80%;
+}
+
+.pAbout{
+  padding: .5em;
+  width: 80%;
+  font-family: helvetica;
+  font-size: .9em;
 }
