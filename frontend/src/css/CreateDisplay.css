@@ -1,5 +1,4 @@
 .createDisplay{
-  border: 3px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -89,4 +88,34 @@ ul{
   border: 1px solid transparent;
   background: transparent;
   cursor: pointer;
+}
+
+.linkA{
+  color: purple;
+  text-decoration:none;
+  padding: .2em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 3px;
+  transition:
+    width 1.5s,
+    height 1.5s,
+    background 2s,
+    -webkit-transform 2s,
+    color 2s;
+}
+
+.linkA:hover{
+  text-decoration: underline;
+}
+
+.last{
+  width: 40%;
+}
+
+.last2{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.35em;
 }

@@ -17,7 +17,7 @@ class CreateDisplay extends Component{
       return(
         <div key={index} className="cardDisplay">
             <ul>
-              <li><h4 className="card-name">Name:</h4> <div className="card">{card.name}</div></li>
+              <li><h4>Name:</h4> <div className="card">{card.name}</div></li>
               <li><h4>Category:</h4><div className="card">{card.category}</div></li>
               <li><h4>Region:</h4><div className="card">{card.region}</div></li>
               <li><h4>County:</h4><div className="card">{card.county}</div></li>
@@ -25,7 +25,7 @@ class CreateDisplay extends Component{
               <li><h4>Camp:</h4><div className="card">{card.camp}</div></li>
               <li><h4>Playground:</h4><div className="card">{card.play}</div></li>
               <li><h4>Beach:</h4><div className="card">{card.beach}</div></li>
-              <li><h4>Facility Url:</h4><div className="card"><a href={card.facility_url}>Link</a></div></li>
+              <li><h4 className="last">Facility Url:</h4><div className="last2"><a className="linkA" target="_blank" href={card.facility_url}>View Link</a></div></li>
             </ul>
           <Favorite fav={spots[index]}/>
         </div>
