@@ -16,6 +16,12 @@ function initMap() {
     center: myLatLng
   });
 
+  let hereString = '<h1> YOU ARE HERE </h1>'
+
+  let infoWindow = new google.maps.InfoWindow({
+    content: hereString
+  });
+
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
@@ -25,9 +31,27 @@ function initMap() {
     title: 'YOU ARE HERE'
   });
 
+  marker.addListener('click', function() {
+  infoWindow.open(map, marker);
+});
+
     for (var i = 0; i < localStorage.length-2; i++) {
 
       let bounceTimer;
+
+
+      let nameString = "parkName" + i;
+      let countyString = "parkCounty" + i;
+
+      let markerName = localStorage.getItem(nameString);
+      let markerCounty = localStorage.getItem(countyString);
+      let markerContent = markerName + markerCounty;
+      // console.log(markerContent);
+
+      let infoWindow = new google.maps.InfoWindow({
+        content: markerContent
+      });
+
       let longitude = "longitude" + i;
       let latitude = "latitude" + i;
 
@@ -42,6 +66,10 @@ function initMap() {
         map: map,
         title: 'Park'
       });
+
+      marker.addListener('click', function() {
+      infoWindow.open(map, marker);
+    });
 
 
       google.maps.event.addListener(marker, 'mouseover', function() {

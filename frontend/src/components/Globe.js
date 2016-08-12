@@ -57,7 +57,34 @@ class Globe extends Component{
 
     });
 
+    let parkName = [];
+
+    parkName = this.state.response.map((name, i) =>{
+      let pname={pname: name.name}
+      parkName.push(pname);
+      // console.log(pname);
+
+      let realParkName = "parkName" + i;
+
+      localStorage.setItem(realParkName, parkName[i].pname);
+      // console.log(localStorage);
+    });
+
+    let parkCounty = [];
+
+    parkCounty = this.state.response.map((county, i) =>{
+      let pcounty={pcounty: county.county}
+      parkCounty.push(pcounty);
+      // console.log(pname);
+
+      let realParkCounty = "parkCounty" + i;
+
+      localStorage.setItem(realParkCounty, parkCounty[i].pcounty);
+      // console.log(localStorage);
+    });
   }
+
+
 
   haversine(globe, lat, long){
     const currentLat = globe.latitude;
