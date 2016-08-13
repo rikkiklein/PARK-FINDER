@@ -31,7 +31,7 @@ class Update extends Component{
     return(
       <div className="row">
         <input type="text"  className="input" onChange={(event)=>this.onChange(event)} value={this.state.searchTextName} placeholder="Add Comment"/>
-        <button className="favorite" onClick={(event)=>this.handleUpdateClick(event)}>Update</button>
+        <button className="update" onClick={(event)=>this.handleUpdateClick(event)}>Update</button>
       </div>
     )
   }

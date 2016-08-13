@@ -1,61 +1,61 @@
 .createDisplay{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-family: "Helvetica";
   text-transform: capitalize;
-  color: #407c66;
-  margin-bottom: 5%;
-  padding-bottom: 1.5em;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
 }
 
-.left-flex{
-  width: 40%;
-  text-align: right;
-  order: 1;
-  color: #63a8e0;
-
-}
-
-.right-flex{
-  width: 65%;
-  text-align: left;
-  order: 2;
-  color:  #3B6356;
-  color: #3B4E63;
-}
-
-.result-flex{
+.cardDisplay{
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border: 1px dotted #3B4E63;
   font-size: .5em;
-  padding-top: .5em;
-  padding-bottom: 1em;
-  width: 30%;
+  width: 20%;
   margin: 1em;
-  padding: 1em;
   border-radius: 5px;
+  justify-content: center;
+  width: 30%;
 }
 
-.single-result-title{
-  text-align: right;
-  padding: .5em;
-  width: 80%;
-
-}
-.single-result-info{
-  text-align: left;
-  padding: .5em;
-
-}
-
-.column{
+.cardDisplayFav{
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
+  border: 1px dotted #3B4E63;
+  font-size: .5em;
+  margin: 1em;
+  border-radius: 5px;
+  justify-content: center;
+  width: 25%;
+  padding-bottom: 1em;
 }
+
+ul li{
+  text-align: left;
+}
+
+ul{
+  padding: 0em;
+  width: 100%;
+  padding: .3em .1em 0em 4em;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-result-info{
+  padding: .5em;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+/*.column{
+  width: 100%;
+}*/
 
 .row{
   display: flex;
@@ -70,14 +70,11 @@
   justify-content: flex-start;
 }
 
-h4{
-  display: inline;
-}
-
 .favorite, .delete, .globe{
   color: #0f2f49;
   border: 1px solid #0f2f49;
   text-transform: uppercase;
+  margin-bottom: 3%;
 }
 
 .delete{
@@ -97,7 +94,6 @@ h4{
   color: #643c59;
   border: 1px solid #643c59;
   cursor: pointer;
-
 }
 
 .delete:hover{
@@ -105,4 +101,45 @@ h4{
   border: 1px solid transparent;
   background: transparent;
   cursor: pointer;
+}
+
+.linkA{
+  color:  #63a8e0;
+  text-decoration:none;
+  padding: .2em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 3px;
+  transition:
+    width 1.5s,
+    height 1.5s,
+    background 2s,
+    -webkit-transform 2s,
+    color 2s;
+}
+
+.linkA:hover{
+  text-decoration: underline;
+  color: #2F56AB;
+}
+
+.last{
+  width: 40%;
+}
+
+.last2{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.35em;
+}
+
+.fav{
+  width: 30%;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.update{
+  height: 2.7em;
 }

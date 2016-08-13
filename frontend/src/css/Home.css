@@ -5,6 +5,11 @@
   justify-content: center;
 }
 
+.outer-about{
+  display: flex;
+  justify-content: center;
+}
+
 .about{
   display: flex;
   flex-direction: column;
@@ -12,29 +17,89 @@
   align-items: center;
   text-align: center;
   min-height: 10vh;
+  width: 80%;
 }
 
 .inner-about{
   padding-bottom: 3%;
-}
-.name{
-  border: 2px solid #490f2f;
-  padding: 1em;
-  font-size: .8em;
-  border-radius: 5px;
-  width: 50%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
 }
 
-h4{
+.gitFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.divider{
+  border: 1px dotted #490f2f;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.name, .description{
+  border: 1px solid #490f2f;
+  border-right: 1px solid transparent;
+  padding: 1em;
+  font-size: .8em;
+  border-radius: 5px 0px 0px 5px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.description{
+  width: 70%;
+  border: 1px solid #490f2f;
+  border-left: 1px solid transparent;
+  border-radius: 0px 5px 5px 0px;
+}
+
+h4, h3{
   color: #490f2f;
   text-transform: uppercase;
   font-family: noteworthy;
+  display: inline-block;
+  width: 20%;
+  margin: .01em;
+}
+
+h3{
+  width: 100%;
 }
 
 h6{
   color: #2F56AB;
   border-bottom: 1px solid #63a8e0;
   font-size: 1em;
+  padding-bottom: .5em;
+  margin: .5em;
+  margin-top: .2em;
+  margin-bottom: .2em;
+  width: 80%;
+}
+
+.card{
+  display: inline-block;
+  width: 70%;
+  text-align: center;
+  font-size: 1.35em;
+}
+
+.card2{
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  font-size: 1.35em;
+}
+
+.pAbout{
+  padding: .5em;
+  width: 80%;
+  font-family: helvetica;
+  font-size: .9em;
 }
