@@ -12,7 +12,7 @@ function initMap() {
   var myLatLng = {lat: myLat, lng: myLong};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 2,
+    zoom: 11,
     center: myLatLng
   });
 
@@ -44,8 +44,8 @@ function initMap() {
 
         let markerName = localStorage.getItem(nameString);
         let markerCounty = localStorage.getItem(countyString);
-        let markerdef = "marker" + i
-        let markerContent = markerName + markerCounty + markerdef;
+        // let markerdef = "marker" + i
+        let markerContent = "Park: " + markerName + "<br>" + "County: " + markerCounty
         // console.log(markerContent);
 
         let longitude = "longitude" + i;
