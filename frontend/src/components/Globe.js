@@ -80,8 +80,8 @@ class Globe extends Component{
       let realParkCounty = "parkCounty" + i;
 
       localStorage.setItem(realParkCounty, parkCounty[i].pcounty);
-      // console.log(localStorage);
     });
+    console.log(localStorage);
   }
 
 

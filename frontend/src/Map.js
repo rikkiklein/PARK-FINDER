@@ -12,7 +12,7 @@ function initMap() {
   var myLatLng = {lat: myLat, lng: myLong};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 2,
     center: myLatLng
   });
 
@@ -35,62 +35,66 @@ function initMap() {
   infoWindow.open(map, marker);
 });
 
-    for (var i = 0; i < localStorage.length-2; i++) {
+    for (var i = 0; i < ((localStorage.length-2) /4); i++) {
 
-      let bounceTimer;
+        let bounceTimer;
+
+        let nameString = "parkName" + i;
+        let countyString = "parkCounty" + i;
+
+        let markerName = localStorage.getItem(nameString);
+        let markerCounty = localStorage.getItem(countyString);
+        let markerdef = "marker" + i
+        let markerContent = markerName + markerCounty + markerdef;
+        // console.log(markerContent);
+
+        let longitude = "longitude" + i;
+        let latitude = "latitude" + i;
+
+        let hosLat = Number(localStorage.getItem(latitude));
+        let hosLong = Number(localStorage.getItem(longitude));
+        var hosLatLng = {lat: hosLat, lng: hosLong};
+
+        let marker = "marker" + i;
+        marker = new google.maps.Marker({
+          position: hosLatLng,
+          draggable: false,
+          optimized: false,
+          map: map,
+          title: 'Park'
+        });
 
 
-      let nameString = "parkName" + i;
-      let countyString = "parkCounty" + i;
+        let infoWindow = "infoWindow" + i;
+          infoWindow = new google.maps.InfoWindow({
+          content: markerContent
+        });
 
-      let markerName = localStorage.getItem(nameString);
-      let markerCounty = localStorage.getItem(countyString);
-      let markerContent = markerName + markerCounty;
-      // console.log(markerContent);
-
-      let infoWindow = new google.maps.InfoWindow({
-        content: markerContent
+        marker.addListener('click', function() {
+        infoWindow.open(map, marker);
       });
 
-      let longitude = "longitude" + i;
-      let latitude = "latitude" + i;
 
-      let hosLat = Number(localStorage.getItem(latitude));
-      let hosLong = Number(localStorage.getItem(longitude));
-      var hosLatLng = {lat: hosLat, lng: hosLong};
+        google.maps.event.addListener(marker, 'mouseover', function() {
+            if (this.getAnimation() == null || typeof this.getAnimation() === 'undefined') {
+                clearTimeout(bounceTimer);
+                var that = this;
+                bounceTimer = setTimeout(function(){
+                     that.setAnimation(google.maps.Animation.BOUNCE);
+                },
+                500);
+            }
+        });
 
-      var marker = new google.maps.Marker({
-        position: hosLatLng,
-        draggable: false,
-        optimized: false,
-        map: map,
-        title: 'Park'
-      });
+        google.maps.event.addListener(marker, 'mouseout', function() {
 
-      marker.addListener('click', function() {
-      infoWindow.open(map, marker);
-    });
+             if (this.getAnimation() != null) {
+                this.setAnimation(null);
+             }
+             clearTimeout(bounceTimer);
+        });
+      }
 
-
-      google.maps.event.addListener(marker, 'mouseover', function() {
-          if (this.getAnimation() == null || typeof this.getAnimation() === 'undefined') {
-              clearTimeout(bounceTimer);
-              var that = this;
-              bounceTimer = setTimeout(function(){
-                   that.setAnimation(google.maps.Animation.BOUNCE);
-              },
-              500);
-          }
-      });
-
-      google.maps.event.addListener(marker, 'mouseout', function() {
-
-           if (this.getAnimation() != null) {
-              this.setAnimation(null);
-           }
-           clearTimeout(bounceTimer);
-      });
-    }
 console.log(localStorage);
 clearStorage();
 };
