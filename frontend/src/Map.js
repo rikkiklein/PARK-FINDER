@@ -45,7 +45,7 @@ function initMap() {
         let markerName = localStorage.getItem(nameString);
         let markerCounty = localStorage.getItem(countyString);
         // let markerdef = "marker" + i
-        let markerContent = "Park: " + markerName + "<br>" + "County: " + markerCounty
+        let markerContent = '<strong> Park: </strong>' + markerName + "<br>" + '<strong> County: </strong>' + markerCounty
         // console.log(markerContent);
 
         let longitude = "longitude" + i;
